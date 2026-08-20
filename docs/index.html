@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corral — clone and organise every repository you own</title>
+<meta name="description" content="Corral automatically clones and organises GitHub repositories into Finder-friendly collections by visibility, ecosystem, and metadata. A single Go binary, corralctl.">
+<link rel="canonical" href="https://corrallib.com/">
+<meta property="og:title" content="Corral — clone and organise every repository you own">
+<meta property="og:description" content="Automatically clone and organise GitHub repositories using Finder-friendly collections, ecosystems, and metadata.">
+<meta property="og:url" content="https://corrallib.com/">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --bg:#fbfaf8; --surface:#fff; --line:#e3ded6; --ink:#1c1a17; --muted:#5f584e;
+  --accent:#8a4b2a; --accent-ink:#fff; --code-bg:#f4f1ec;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme=light]){
+    --bg:#151311; --surface:#1d1a17; --line:#332e29; --ink:#efe9e1; --muted:#a99e91;
+    --accent:#d98b5f; --accent-ink:#1c1a17; --code-bg:#232019;
+  }
+}
+:root[data-theme=dark]{
+  --bg:#151311; --surface:#1d1a17; --line:#332e29; --ink:#efe9e1; --muted:#a99e91;
+  --accent:#d98b5f; --accent-ink:#1c1a17; --code-bg:#232019;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.65 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+a{color:var(--accent)}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+header{padding:5rem 0 3.5rem;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(2.25rem,6vw,3.5rem);line-height:1.08;margin:0 0 1rem;letter-spacing:-.02em;text-wrap:balance}
+.lede{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--muted);margin:0 0 2rem;max-width:38rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:.5rem;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+pre{background:var(--code-bg);border:1px solid var(--line);border-radius:.6rem;padding:1rem 1.1rem;overflow-x:auto;font-size:.9rem;margin:0}
+:not(pre)>code{background:var(--code-bg);border-radius:.3rem;padding:.12em .4em;font-size:.9em}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font-size:1.55rem;margin:0 0 .6rem;letter-spacing:-.01em}
+h2+p.sub{color:var(--muted);margin:0 0 1.75rem;max-width:42rem}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.7rem;padding:1.25rem}
+.card h3{margin:0 0 .4rem;font-size:1rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.tree{color:var(--muted);font-size:.87rem;line-height:1.75}
+.tree b{color:var(--ink);font-weight:600}
+footer{padding:2.5rem 0 4rem;color:var(--muted);font-size:.9rem}
+footer a{color:var(--muted)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:.35rem}
+@media (prefers-reduced-motion:no-preference){a,.btn{transition:opacity .15s ease}.btn:hover{opacity:.88}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Every repository you own, in one tidy workspace.</h1>
+    <p class="lede">Corral clones and organises GitHub repositories into Finder-friendly collections, grouped by visibility, ecosystem, and metadata. One Go binary, <code>corralctl</code>.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/sebastienrousseau/corral#install">Install</a>
+      <a class="btn btn-ghost" href="https://doc.corrallib.com">Documentation</a>
+      <a class="btn btn-ghost" href="https://github.com/sebastienrousseau/corral">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Install</h2>
+    <p class="sub">macOS and Linux. Managed alongside the rest of your tools.</p>
+    <pre><code>mise use -g github:sebastienrousseau/corral</code></pre>
+    <p class="sub" style="margin-top:1rem">Also available via Homebrew (<code>brew install sebastienrousseau/tap/corralctl</code>), the AUR (<code>corralctl-bin</code>), <code>.deb</code>/<code>.rpm</code> packages, or built from source with Go 1.26+.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>One command</h2>
+    <p class="sub">Fetches everything you own and lays it out predictably.</p>
+    <pre><code>corralctl &lt;your-github-username&gt;</code></pre>
+    <p class="sub" style="margin-top:1.5rem">Repositories land in a structure you can navigate without thinking:</p>
+    <pre class="tree"><code>~/Code
+├── <b>Public</b>
+│   ├── <b>Go</b>        corral, …
+│   ├── <b>Rust</b>      …
+│   └── <b>Python</b>    …
+└── <b>Private</b>
+    └── <b>JavaScript</b> …</code></pre>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it does</h2>
+    <p class="sub">Built for people whose repository count outgrew their patience.</p>
+    <div class="grid">
+      <div class="card"><h3>Structured layout</h3><p>Collections and ecosystems derived from each repository's visibility and primary language, with customisable templates.</p></div>
+      <div class="card"><h3>Smart syncing</h3><p>Network-optimised incremental updates that skip work when nothing upstream has changed.</p></div>
+      <div class="card"><h3>Concurrent by default</h3><p>Clone and refresh many repositories at once, with the concurrency under your control.</p></div>
+      <div class="card"><h3>Interactive TUI</h3><p>A terminal interface with keybindings, commands, and autocomplete for browsing the workspace.</p></div>
+      <div class="card"><h3>Exec mode</h3><p>Run a Git command across every repository in the workspace, concurrently.</p></div>
+      <div class="card"><h3>MCP server</h3><p>Expose the workspace to AI coding agents over the Model Context Protocol, built on the official Go SDK.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Corral is free software, released under the GPL-3.0 licence.
+    <a href="https://github.com/sebastienrousseau/corral">Source</a> ·
+    <a href="https://doc.corrallib.com">Docs</a> ·
+    <a href="https://github.com/sebastienrousseau/corral/releases/latest">Releases</a></p>
+    <p>© 2026 Sebastien Rousseau</p>
+  </div>
+</footer>
+</body>
+</html>
