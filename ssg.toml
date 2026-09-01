@@ -1,0 +1,20 @@
+# Generated site-level configuration for corrallib.github.io
+site_name = "Corral Lib"
+site_title = "Corral Lib | High-Performance Rust Data Management Library"
+site_description = "Memory-efficient data structures, concurrent caching, and storage primitives for systems programming in Rust."
+base_url = "https://corrallib.com"
+language = "en-GB"
+
+content_dir = "_posts"
+template_dir = "_layouts"
+output_dir = "docs"
+
+[agents]
+agents_txt = true
+ai_plugin = true
+
+[agents.mcp]
+enabled = true
+
+[edge_headers]
+targets = ["netlify", "cloudflare", "vercel"]

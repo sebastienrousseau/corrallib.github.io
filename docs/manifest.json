@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "description": "High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.",
+  "display": "standalone",
+  "name": "Corral",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "corrallib",
+  "start_url": ".",
+  "theme_color": null
+}

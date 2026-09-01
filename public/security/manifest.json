@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Security guarantees, credential isolation, memory safety, and CycloneDX SBOM provenance.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Corral",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "corrallib",
+  "start_url": ".",
+  "theme_color": null
+}

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://corrallib.com/terms/index.html/sitemap.xml

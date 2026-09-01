@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<url>
+  <loc>http://127.0.0.1:8000/404/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Page Not Found (404) | Corral</news:title>
+    <news:keywords>404 not found</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/about/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>About Sebastien Rousseau & Corral</news:title>
+    <news:keywords>Sebastien Rousseau, Corral creator, open source architect</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/accessibility/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Accessibility Statement: WCAG 2.2 Level AAA Compliance</news:title>
+    <news:keywords>accessibility statement</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/api/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>API Reference: Rust Crate (corrallib)</news:title>
+    <news:keywords>corrallib API, rust git crate</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/architecture/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Internal Architecture: Async Workers, Git Abstraction & Concurrency</news:title>
+    <news:keywords>corral architecture, rust git concurrency</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/benchmarks/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Performance Benchmarks: Parallel vs Sequential Git Cloning</news:title>
+    <news:keywords>corral benchmarks, git clone speed comparison</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/changelog/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Changelog & Version History</news:title>
+    <news:keywords>corral changelog, version history</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/contact/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Contact & Enterprise Inquiries</news:title>
+    <news:keywords>contact corral</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/contributing/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Contributing to Corral</news:title>
+    <news:keywords>contribute corral, open source contribution</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/documentation/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>CLI Command Reference & Manifest Syntax</news:title>
+    <news:keywords>corral documentation, corral CLI commands, Corral.toml syntax</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/examples/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Workspace Configuration Examples & Manifests</news:title>
+    <news:keywords>corral examples, Corral.toml examples</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/faqs/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Frequently Asked Questions (FAQ): Corral</news:title>
+    <news:keywords>corral FAQ, git workspace questions</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/features/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Core Features: Parallel Cloner, Manifests & Health Checks</news:title>
+    <news:keywords>corral features, multi repo git, parallel git clone</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/getting-started/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Getting Started with Corral: Installation & Quickstart</news:title>
+    <news:keywords>install corral, cargo corrallib, git workspace setup</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/made-with-ssg/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Made with Static Site Generator (SSG)</news:title>
+    <news:keywords>Static Site Generator, SSG</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/offline/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Offline Access: Corral</news:title>
+    <news:keywords>offline corral</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/privacy/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Privacy Policy: Zero-Telemetry Architecture</news:title>
+    <news:keywords>corral privacy policy</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/security/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Security Architecture: Zero Telemetry, Credential Safety & SBOM</news:title>
+    <news:keywords>corral security, zero telemetry git tool</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/terms/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Terms of Use & Open Source License</news:title>
+    <news:keywords>terms of use</news:keywords>
+  </news:news>
+</url>
+<url>
+  <loc>http://127.0.0.1:8000/thanks/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sebastien Rousseau</news:name>
+      <news:language>en-GB</news:language>
+    </news:publication>
+    <news:publication_date></news:publication_date>
+    <news:title>Thank You | Corral</news:title>
+    <news:keywords>thank you</news:keywords>
+  </news:news>
+</url>
+</urlset>

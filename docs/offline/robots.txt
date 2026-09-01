@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://corrallib.com/offline/index.html/sitemap.xml
