@@ -1,0 +1,17 @@
+{
+  "author": "Sebastien Rousseau",
+  "banner": "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp",
+  "banner_alt": "Corral — High-Performance Repository & Workspace Engine",
+  "date": "2026-09-01",
+  "description": "Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication.",
+  "keywords": "corral FAQ, git workspace questions",
+  "language": "en-GB",
+  "layout": "faqs",
+  "logo": "https://cloudcdn.pro/cmn/v1/logos/cmn.svg",
+  "name": "Corral",
+  "permalink": "https://corrallib.com/faqs/index.html",
+  "reading_time": 1,
+  "short_name": "corrallib",
+  "title": "Frequently Asked Questions (FAQ): Corral",
+  "word_count": 164
+}

@@ -1,0 +1,17 @@
+{
+  "author": "Sebastien Rousseau",
+  "banner": "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp",
+  "banner_alt": "Corral — High-Performance Repository & Workspace Engine",
+  "date": "2026-09-01",
+  "description": "High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.",
+  "keywords": "corral git, multi-repo management, workspace organization, git clone parallel, rust git tool",
+  "language": "en-GB",
+  "layout": "index",
+  "logo": "https://cloudcdn.pro/cmn/v1/logos/cmn.svg",
+  "name": "Corral",
+  "permalink": "https://corrallib.com/",
+  "reading_time": 4,
+  "short_name": "corrallib",
+  "title": "Corral: High-Performance Repository & Workspace Engine",
+  "word_count": 831
+}

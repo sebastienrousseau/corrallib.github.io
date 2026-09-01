@@ -1,0 +1,182 @@
+[
+  {
+    "date": "2026-09-01",
+    "description": "Background and credentials of Sebastien Rousseau, creator of Corral and financial infrastructure architect.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "About Sebastien Rousseau & Corral",
+    "url": "http://127.0.0.1:8000/about/",
+    "wordCount": 110
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Accessibility statement declaring WCAG 2.2 Level AAA compliance.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Accessibility Statement: WCAG 2.2 Level AAA Compliance",
+    "url": "http://127.0.0.1:8000/accessibility/",
+    "wordCount": 25
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Programmatic API documentation for embedding corrallib in custom developer tools and CI pipelines.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "API Reference: Rust Crate (corrallib)",
+    "url": "http://127.0.0.1:8000/api/",
+    "wordCount": 40
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Architectural overview of Corral's lockless worker pool, Git process virtualization, and state reconciliation.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Internal Architecture: Async Workers, Git Abstraction & Concurrency",
+    "url": "http://127.0.0.1:8000/architecture/",
+    "wordCount": 89
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Empirical benchmarks comparing Corral against sequential git cloning and shell scripts across 100 repositories.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Performance Benchmarks: Parallel vs Sequential Git Cloning",
+    "url": "http://127.0.0.1:8000/benchmarks/",
+    "wordCount": 69
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Release notes and changelog for Corral starting at v0.0.1.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Changelog & Version History",
+    "url": "http://127.0.0.1:8000/changelog/",
+    "wordCount": 51
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Get in touch regarding Corral developer tooling and integrations.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Contact & Enterprise Inquiries",
+    "url": "http://127.0.0.1:8000/contact/",
+    "wordCount": 74
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Guidelines for contributing to the Corral project.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Contributing to Corral",
+    "url": "http://127.0.0.1:8000/contributing/",
+    "wordCount": 20
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Comprehensive CLI documentation for corral commands including sync, status, exec, and init.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "CLI Command Reference & Manifest Syntax",
+    "url": "http://127.0.0.1:8000/documentation/",
+    "wordCount": 106
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Sample Corral.toml configurations for microservices, financial pipelines, and open-source ecosystems.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Workspace Configuration Examples & Manifests",
+    "url": "http://127.0.0.1:8000/examples/",
+    "wordCount": 57
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Frequently Asked Questions (FAQ): Corral",
+    "url": "http://127.0.0.1:8000/faqs/",
+    "wordCount": 164
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Detailed overview of Corral's multi-threaded concurrency, declarative manifest engine, and batch execution capabilities.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Core Features: Parallel Cloner, Manifests & Health Checks",
+    "url": "http://127.0.0.1:8000/features/",
+    "wordCount": 133
+  },
+  {
+    "date": "2026-09-01",
+    "description": "How to install Corral via Cargo, Homebrew, and Docker alongside step-by-step workspace initialization guides.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Getting Started with Corral: Installation & Quickstart",
+    "url": "http://127.0.0.1:8000/getting-started/",
+    "wordCount": 108
+  },
+  {
+    "date": "2026-09-01",
+    "description": "High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Corral: High-Performance Repository & Workspace Engine",
+    "url": "http://127.0.0.1:8000/index.html",
+    "wordCount": 831
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Details on native Rust static site generation.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Made with Static Site Generator (SSG)",
+    "url": "http://127.0.0.1:8000/made-with-ssg/",
+    "wordCount": 22
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Service worker offline fallback page.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Offline Access: Corral",
+    "url": "http://127.0.0.1:8000/offline/",
+    "wordCount": 13
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Privacy policy declaring zero tracking cookies and completely local computation.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Privacy Policy: Zero-Telemetry Architecture",
+    "url": "http://127.0.0.1:8000/privacy/",
+    "wordCount": 23
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Security guarantees, credential isolation, memory safety, and CycloneDX SBOM provenance.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Security Architecture: Zero Telemetry, Credential Safety & SBOM",
+    "url": "http://127.0.0.1:8000/security/",
+    "wordCount": 93
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Terms governing Corral under Apache-2.0 and MIT licenses.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Terms of Use & Open Source License",
+    "url": "http://127.0.0.1:8000/terms/",
+    "wordCount": 15
+  },
+  {
+    "date": "2026-09-01",
+    "description": "Thank you for your message.",
+    "locale": "en-GB",
+    "tags": [],
+    "title": "Thank You | Corral",
+    "url": "http://127.0.0.1:8000/thanks/",
+    "wordCount": 26
+  }
+]

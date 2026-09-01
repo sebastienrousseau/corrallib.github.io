@@ -1,0 +1,309 @@
+{
+  "feed_url": "http://127.0.0.1:8000/feed.json",
+  "home_page_url": "http://127.0.0.1:8000/",
+  "items": [
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "The requested documentation page could not be found.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/404/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Page Not Found (404) | Corral",
+      "url": "http://127.0.0.1:8000/404/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Background and credentials of Sebastien Rousseau, creator of Corral and financial infrastructure architect.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/about/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "About Sebastien Rousseau & Corral",
+      "url": "http://127.0.0.1:8000/about/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Accessibility statement declaring WCAG 2.2 Level AAA compliance.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/accessibility/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Accessibility Statement: WCAG 2.2 Level AAA Compliance",
+      "url": "http://127.0.0.1:8000/accessibility/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Programmatic API documentation for embedding corrallib in custom developer tools and CI pipelines.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/api/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "API Reference: Rust Crate (corrallib)",
+      "url": "http://127.0.0.1:8000/api/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Architectural overview of Corral's lockless worker pool, Git process virtualization, and state reconciliation.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/architecture/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Internal Architecture: Async Workers, Git Abstraction & Concurrency",
+      "url": "http://127.0.0.1:8000/architecture/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Empirical benchmarks comparing Corral against sequential git cloning and shell scripts across 100 repositories.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/benchmarks/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Performance Benchmarks: Parallel vs Sequential Git Cloning",
+      "url": "http://127.0.0.1:8000/benchmarks/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Release notes and changelog for Corral starting at v0.0.1.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/changelog/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Changelog & Version History",
+      "url": "http://127.0.0.1:8000/changelog/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Get in touch regarding Corral developer tooling and integrations.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/contact/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Contact & Enterprise Inquiries",
+      "url": "http://127.0.0.1:8000/contact/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Guidelines for contributing to the Corral project.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/contributing/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Contributing to Corral",
+      "url": "http://127.0.0.1:8000/contributing/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Comprehensive CLI documentation for corral commands including sync, status, exec, and init.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/documentation/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "CLI Command Reference & Manifest Syntax",
+      "url": "http://127.0.0.1:8000/documentation/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Sample Corral.toml configurations for microservices, financial pipelines, and open-source ecosystems.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/examples/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Workspace Configuration Examples & Manifests",
+      "url": "http://127.0.0.1:8000/examples/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/faqs/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Frequently Asked Questions (FAQ): Corral",
+      "url": "http://127.0.0.1:8000/faqs/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Detailed overview of Corral's multi-threaded concurrency, declarative manifest engine, and batch execution capabilities.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/features/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Core Features: Parallel Cloner, Manifests & Health Checks",
+      "url": "http://127.0.0.1:8000/features/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "How to install Corral via Cargo, Homebrew, and Docker alongside step-by-step workspace initialization guides.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/getting-started/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Getting Started with Corral: Installation & Quickstart",
+      "url": "http://127.0.0.1:8000/getting-started/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Details on native Rust static site generation.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/made-with-ssg/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Made with Static Site Generator (SSG)",
+      "url": "http://127.0.0.1:8000/made-with-ssg/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Service worker offline fallback page.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/offline/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Offline Access: Corral",
+      "url": "http://127.0.0.1:8000/offline/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Privacy policy declaring zero tracking cookies and completely local computation.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/privacy/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Privacy Policy: Zero-Telemetry Architecture",
+      "url": "http://127.0.0.1:8000/privacy/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Security guarantees, credential isolation, memory safety, and CycloneDX SBOM provenance.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/security/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Security Architecture: Zero Telemetry, Credential Safety & SBOM",
+      "url": "http://127.0.0.1:8000/security/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Terms governing Corral under Apache-2.0 and MIT licenses.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/terms/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Terms of Use & Open Source License",
+      "url": "http://127.0.0.1:8000/terms/"
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastien Rousseau"
+        }
+      ],
+      "content_html": "Thank you for your message.",
+      "date_modified": "",
+      "date_published": "",
+      "id": "http://127.0.0.1:8000/thanks/",
+      "language": "en-GB",
+      "tags": [],
+      "title": "Thank You | Corral",
+      "url": "http://127.0.0.1:8000/thanks/"
+    }
+  ],
+  "language": "en-GB",
+  "title": "MySsgSite",
+  "version": "https://jsonfeed.org/version/1.1"
+}

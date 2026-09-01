@@ -1,0 +1,17 @@
+{
+  "author": "Sebastien Rousseau",
+  "banner": "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp",
+  "banner_alt": "Corral — High-Performance Repository & Workspace Engine",
+  "date": "2026-09-01",
+  "description": "Architectural overview of Corral's lockless worker pool, Git process virtualization, and state reconciliation.",
+  "keywords": "corral architecture, rust git concurrency",
+  "language": "en-GB",
+  "layout": "page",
+  "logo": "https://cloudcdn.pro/cmn/v1/logos/cmn.svg",
+  "name": "Corral",
+  "permalink": "https://corrallib.com/architecture/index.html",
+  "reading_time": 1,
+  "short_name": "corrallib",
+  "title": "Internal Architecture: Async Workers, Git Abstraction & Concurrency",
+  "word_count": 89
+}

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MySsgSite</title>
+  <link href="http://127.0.0.1:8000/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://127.0.0.1:8000"/>
+  <id>http://127.0.0.1:8000</id>
+  <updated></updated>
+  <entry>
+    <title>Page Not Found (404) | Corral</title>
+    <link href="http://127.0.0.1:8000/404/"/>
+    <id>http://127.0.0.1:8000/404/</id>
+    <updated></updated>
+    <published></published>
+    <summary>The requested documentation page could not be found.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>About Sebastien Rousseau &amp; Corral</title>
+    <link href="http://127.0.0.1:8000/about/"/>
+    <id>http://127.0.0.1:8000/about/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Background and credentials of Sebastien Rousseau, creator of Corral and financial infrastructure architect.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Accessibility Statement: WCAG 2.2 Level AAA Compliance</title>
+    <link href="http://127.0.0.1:8000/accessibility/"/>
+    <id>http://127.0.0.1:8000/accessibility/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Accessibility statement declaring WCAG 2.2 Level AAA compliance.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>API Reference: Rust Crate (corrallib)</title>
+    <link href="http://127.0.0.1:8000/api/"/>
+    <id>http://127.0.0.1:8000/api/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Programmatic API documentation for embedding corrallib in custom developer tools and CI pipelines.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Internal Architecture: Async Workers, Git Abstraction &amp; Concurrency</title>
+    <link href="http://127.0.0.1:8000/architecture/"/>
+    <id>http://127.0.0.1:8000/architecture/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Architectural overview of Corral&apos;s lockless worker pool, Git process virtualization, and state reconciliation.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Performance Benchmarks: Parallel vs Sequential Git Cloning</title>
+    <link href="http://127.0.0.1:8000/benchmarks/"/>
+    <id>http://127.0.0.1:8000/benchmarks/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Empirical benchmarks comparing Corral against sequential git cloning and shell scripts across 100 repositories.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Changelog &amp; Version History</title>
+    <link href="http://127.0.0.1:8000/changelog/"/>
+    <id>http://127.0.0.1:8000/changelog/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Release notes and changelog for Corral starting at v0.0.1.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Contact &amp; Enterprise Inquiries</title>
+    <link href="http://127.0.0.1:8000/contact/"/>
+    <id>http://127.0.0.1:8000/contact/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Get in touch regarding Corral developer tooling and integrations.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Contributing to Corral</title>
+    <link href="http://127.0.0.1:8000/contributing/"/>
+    <id>http://127.0.0.1:8000/contributing/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Guidelines for contributing to the Corral project.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>CLI Command Reference &amp; Manifest Syntax</title>
+    <link href="http://127.0.0.1:8000/documentation/"/>
+    <id>http://127.0.0.1:8000/documentation/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Comprehensive CLI documentation for corral commands including sync, status, exec, and init.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Workspace Configuration Examples &amp; Manifests</title>
+    <link href="http://127.0.0.1:8000/examples/"/>
+    <id>http://127.0.0.1:8000/examples/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Sample Corral.toml configurations for microservices, financial pipelines, and open-source ecosystems.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Frequently Asked Questions (FAQ): Corral</title>
+    <link href="http://127.0.0.1:8000/faqs/"/>
+    <id>http://127.0.0.1:8000/faqs/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Core Features: Parallel Cloner, Manifests &amp; Health Checks</title>
+    <link href="http://127.0.0.1:8000/features/"/>
+    <id>http://127.0.0.1:8000/features/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Detailed overview of Corral&apos;s multi-threaded concurrency, declarative manifest engine, and batch execution capabilities.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Getting Started with Corral: Installation &amp; Quickstart</title>
+    <link href="http://127.0.0.1:8000/getting-started/"/>
+    <id>http://127.0.0.1:8000/getting-started/</id>
+    <updated></updated>
+    <published></published>
+    <summary>How to install Corral via Cargo, Homebrew, and Docker alongside step-by-step workspace initialization guides.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Made with Static Site Generator (SSG)</title>
+    <link href="http://127.0.0.1:8000/made-with-ssg/"/>
+    <id>http://127.0.0.1:8000/made-with-ssg/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Details on native Rust static site generation.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Offline Access: Corral</title>
+    <link href="http://127.0.0.1:8000/offline/"/>
+    <id>http://127.0.0.1:8000/offline/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Service worker offline fallback page.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Privacy Policy: Zero-Telemetry Architecture</title>
+    <link href="http://127.0.0.1:8000/privacy/"/>
+    <id>http://127.0.0.1:8000/privacy/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Privacy policy declaring zero tracking cookies and completely local computation.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Security Architecture: Zero Telemetry, Credential Safety &amp; SBOM</title>
+    <link href="http://127.0.0.1:8000/security/"/>
+    <id>http://127.0.0.1:8000/security/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Security guarantees, credential isolation, memory safety, and CycloneDX SBOM provenance.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Terms of Use &amp; Open Source License</title>
+    <link href="http://127.0.0.1:8000/terms/"/>
+    <id>http://127.0.0.1:8000/terms/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Terms governing Corral under Apache-2.0 and MIT licenses.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+  <entry>
+    <title>Thank You | Corral</title>
+    <link href="http://127.0.0.1:8000/thanks/"/>
+    <id>http://127.0.0.1:8000/thanks/</id>
+    <updated></updated>
+    <published></published>
+    <summary>Thank you for your message.</summary>
+    <author><name>Sebastien Rousseau</name></author>
+  </entry>
+</feed>

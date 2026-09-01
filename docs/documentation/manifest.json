@@ -1,0 +1,19 @@
+{
+  "background_color": "#ffffff",
+  "description": "Comprehensive CLI documentation for corral commands including sync, status, exec, and init.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Corral",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "corrallib",
+  "start_url": ".",
+  "theme_color": null
+}

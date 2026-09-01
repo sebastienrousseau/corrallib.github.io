@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Corral: High-Performance Repository &amp; Workspace Engine</title>
+    <link>https://corrallib.com/</link>
+    <description>High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.</description>
+    <atom:link href="http://127.0.0.1:8000/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
+    <item>
+      <title>API Reference: Rust Crate (corrallib)</title>
+      <link>http://127.0.0.1:8000/api/</link>
+      <description>Programmatic API documentation for embedding corrallib in custom developer tools and CI pipelines.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/api/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>About Sebastien Rousseau & Corral</title>
+      <link>http://127.0.0.1:8000/about/</link>
+      <description>Background and credentials of Sebastien Rousseau, creator of Corral and financial infrastructure architect.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/about/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Accessibility Statement: WCAG 2.2 Level AAA Compliance</title>
+      <link>http://127.0.0.1:8000/accessibility/</link>
+      <description>Accessibility statement declaring WCAG 2.2 Level AAA compliance.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/accessibility/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>CLI Command Reference & Manifest Syntax</title>
+      <link>http://127.0.0.1:8000/documentation/</link>
+      <description>Comprehensive CLI documentation for corral commands including sync, status, exec, and init.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/documentation/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Changelog & Version History</title>
+      <link>http://127.0.0.1:8000/changelog/</link>
+      <description>Release notes and changelog for Corral starting at v0.0.1.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/changelog/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Contact & Enterprise Inquiries</title>
+      <link>http://127.0.0.1:8000/contact/</link>
+      <description>Get in touch regarding Corral developer tooling and integrations.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/contact/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Contributing to Corral</title>
+      <link>http://127.0.0.1:8000/contributing/</link>
+      <description>Guidelines for contributing to the Corral project.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/contributing/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Core Features: Parallel Cloner, Manifests & Health Checks</title>
+      <link>http://127.0.0.1:8000/features/</link>
+      <description>Detailed overview of Corral&apos;s multi-threaded concurrency, declarative manifest engine, and batch execution capabilities.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/features/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Frequently Asked Questions (FAQ): Corral</title>
+      <link>http://127.0.0.1:8000/faqs/</link>
+      <description>Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/faqs/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Getting Started with Corral: Installation & Quickstart</title>
+      <link>http://127.0.0.1:8000/getting-started/</link>
+      <description>How to install Corral via Cargo, Homebrew, and Docker alongside step-by-step workspace initialization guides.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/getting-started/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Internal Architecture: Async Workers, Git Abstraction & Concurrency</title>
+      <link>http://127.0.0.1:8000/architecture/</link>
+      <description>Architectural overview of Corral&apos;s lockless worker pool, Git process virtualization, and state reconciliation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/architecture/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Made with Static Site Generator (SSG)</title>
+      <link>http://127.0.0.1:8000/made-with-ssg/</link>
+      <description>Details on native Rust static site generation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/made-with-ssg/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Offline Access: Corral</title>
+      <link>http://127.0.0.1:8000/offline/</link>
+      <description>Service worker offline fallback page.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/offline/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Page Not Found (404) | Corral</title>
+      <link>http://127.0.0.1:8000/404/</link>
+      <description>The requested documentation page could not be found.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/404/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Performance Benchmarks: Parallel vs Sequential Git Cloning</title>
+      <link>http://127.0.0.1:8000/benchmarks/</link>
+      <description>Empirical benchmarks comparing Corral against sequential git cloning and shell scripts across 100 repositories.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/benchmarks/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Privacy Policy: Zero-Telemetry Architecture</title>
+      <link>http://127.0.0.1:8000/privacy/</link>
+      <description>Privacy policy declaring zero tracking cookies and completely local computation.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/privacy/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Security Architecture: Zero Telemetry, Credential Safety & SBOM</title>
+      <link>http://127.0.0.1:8000/security/</link>
+      <description>Security guarantees, credential isolation, memory safety, and CycloneDX SBOM provenance.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/security/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Terms of Use & Open Source License</title>
+      <link>http://127.0.0.1:8000/terms/</link>
+      <description>Terms governing Corral under Apache-2.0 and MIT licenses.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/terms/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Thank You | Corral</title>
+      <link>http://127.0.0.1:8000/thanks/</link>
+      <description>Thank you for your message.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/thanks/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+    <item>
+      <title>Workspace Configuration Examples & Manifests</title>
+      <link>http://127.0.0.1:8000/examples/</link>
+      <description>Sample Corral.toml configurations for microservices, financial pipelines, and open-source ecosystems.</description>
+      <guid isPermaLink="true">http://127.0.0.1:8000/examples/</guid>
+      <pubDate></pubDate>
+      <author>Sebastien Rousseau</author>
+      <enclosure url="https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp" type="image/webp" length="0"/>
+    </item>
+  </channel>
+</rss>

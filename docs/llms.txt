@@ -1,0 +1,14 @@
+# Corral
+> High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.
+
+## Core Documentation & Resources
+- Homepage: https://corrallib.com/
+- Getting Started: https://corrallib.com/getting-started/index.html
+- Core Features: https://corrallib.com/features/index.html
+- CLI Documentation: https://corrallib.com/documentation/index.html
+- Workspace Examples: https://corrallib.com/examples/index.html
+- Performance Benchmarks: https://corrallib.com/benchmarks/index.html
+- Architecture: https://corrallib.com/architecture/index.html
+- Security & Trust: https://corrallib.com/security/index.html
+- API Reference: https://corrallib.com/api/index.html
+- About Sebastien Rousseau: https://corrallib.com/about/index.html
