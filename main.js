@@ -224,13 +224,44 @@
           return;
         }
 
-        results.innerHTML = matches.map(function (item) {
-          return '<a class="search-item" href="' + item.url + '">' +
-            '<div class="search-item-title">' + escapeHtml(item.title) + '</div>' +
-            '<div class="search-item-desc">' + escapeHtml((item.description || item.content || '').replace(/<[^>]+>/g, '').slice(0, 140)) + '...</div>' +
-            '</a>';
-        }).join('');
+        // Build the results as elements: titles and descriptions go in as
+        // text, and only same-origin links are kept, so nothing from the
+        // search index is ever parsed as markup.
+        results.textContent = '';
+        matches.forEach(function (item) {
+          var href = sameOriginHref(item.url);
+          if (!href) return;
+          var link = document.createElement('a');
+          link.className = 'search-item';
+          link.href = href;
+          var title = document.createElement('div');
+          title.className = 'search-item-title';
+          title.textContent = item.title || '';
+          var desc = document.createElement('div');
+          desc.className = 'search-item-desc';
+          desc.textContent = plainText(item.description || item.content).slice(0, 140) + '...';
+          link.appendChild(title);
+          link.appendChild(desc);
+          results.appendChild(link);
+        });
       });
+    }
+  }
+
+  // Text content of an HTML fragment, parsed in an inert document.
+  function plainText(value) {
+    var doc = new DOMParser().parseFromString(String(value || ''), 'text/html');
+    return doc.body.textContent || '';
+  }
+
+  // The URL as an absolute same-origin href, or null for anything else
+  // (another origin, javascript:, data:).
+  function sameOriginHref(value) {
+    try {
+      var url = new URL(String(value || ''), window.location.href);
+      return url.origin === window.location.origin ? url.href : null;
+    } catch (e) {
+      return null;
     }
   }
 
