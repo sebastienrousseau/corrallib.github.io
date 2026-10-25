@@ -13,7 +13,9 @@ help:
 	@echo "  make clean      - Remove build artifacts and temporary files"
 
 build:
-	@if command -v ssg >/dev/null 2>&1; then 		ssg build --content _posts --template _layouts --output public; 		python3 scripts/post-build.py; 	elif [ -f build.sh ]; then 		bash build.sh; 	else 		echo "Notice: Standard SSG layout ready. Run 'cargo install ssg' to compile."; 	fi
+	rm -rf docs
+	ssg build -f ssg.toml -q
+	python3 scripts/post-build.py
 
 audit: contrast validate
 	@/usr/bin/python3 scripts/regression-test.py
