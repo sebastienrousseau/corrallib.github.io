@@ -1,49 +1,134 @@
 ---
 name: "Corral"
-short_name: "corrallib"
-title: "Frequently Asked Questions (FAQ): Corral"
-description: "Common questions about Corral, Git submodules comparison, CI/CD usage, and authentication."
-keywords: "corral FAQ, git workspace questions"
+short_name: "Corral"
+title: "Frequently asked questions about corralctl | Corral"
+description: "Answers about corralctl: what it is, which forges it supports, whether it deletes anything, running it unattended, Windows, backups, the MCP server and the licence."
+keywords: "corralctl faq, corralctl questions, does corralctl delete repositories, corralctl windows"
 author: "Sebastien Rousseau"
-date: "2026-09-01"
+date: "2026-10-25"
+news_publication_date: "2026-10-25"
+layout: "page"
 language: "en-GB"
-layout: "faqs"
-permalink: "https://corrallib.com/faqs/index.html"
-logo: "/logo.svg"
-banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
-banner_alt: "Corral — High-Performance Repository & Workspace Engine"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "FAQ"
+headline: "Frequently asked questions"
+lead: "Short answers first; each links to the page with the detail where there is one."
+nav_faqs: "true"
 ---
+## What is corralctl?
 
-# Frequently Asked Questions
+corralctl is a free, open-source command-line tool and MCP server, written in Go under the GPL-3.0, that clones your repositories from six forges into one organised local layout and keeps them in sync.
 
-<div class="apple-faq-section my-4">
-<div class="apple-faq-header">
-<h2 class="apple-faq-title">Questions? Answers.</h2>
-<button type="button" class="apple-faq-expand-btn" id="faqExpandAllBtn" aria-expanded="false">
-<span class="apple-faq-btn-text">Expand all</span>
-<svg class="apple-faq-expand-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</button>
-</div>
+## Which forges does it work with?
 
-<div class="apple-faq-list">
-<details class="apple-faq-item">
-<summary class="apple-faq-summary">
-<span class="apple-faq-question">How does Corral handle merge conflicts during sync?</span>
-<span class="apple-faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-</summary>
-<div class="apple-faq-body">
-<p>By default, Corral performs fast-forward updates. If a repository has local uncommitted changes or divergent history, Corral safely leaves the local branch intact and flags the repository in the status summary.</p>
-</div>
-</details>
+GitHub, GitLab, Gitea, Forgejo, Codeberg and Bitbucket. Repositories cloned by hand from any other host still work with the index, the MCP server and symbol lookup.
 
-<details class="apple-faq-item">
-<summary class="apple-faq-summary">
-<span class="apple-faq-question">Is Corral compatible with private GitHub/GitLab enterprise servers?</span>
-<span class="apple-faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-</summary>
-<div class="apple-faq-body">
-<p>Yes. Any standard Git remote URL (HTTPS or SSH) is fully supported, including self-hosted GitLab, GitHub Enterprise Server, and Gitea.</p>
-</div>
-</details>
-</div>
-</div>
+## Does it delete repositories that were deleted on the forge?
+
+Not during a normal run. --orphans reports them, and the explicit prune command removes only those that pass the unpublished-work checks, after you confirm with --yes.
+
+## Can I run it from cron or a systemd timer?
+
+Yes. It runs non-interactively by default and every git credential prompt is turned off, so a scheduled run never hangs waiting for input.
+
+## Where do repositories with no primary language go?
+
+Into the Other ecosystem folder, for example Public/Other/my-repo.
+
+## Does it work on Windows?
+
+Binaries are published for Windows, but macOS Finder tags do nothing there and it is less tested than on macOS and Linux; WSL is the better-tested route.
+
+## Is it a backup tool?
+
+No. It clones working copies to read and edit. For archival copies that keep every ref, use git clone --mirror or a purpose-built backup tool.
+
+## Does the MCP server send my code anywhere?
+
+Not in its default read-only mode: it makes no network calls and never contacts the GitHub API. Only the opt-in clone and sync tools reach the network, through git.
+
+## How much does it cost?
+
+Nothing. corralctl is free software under the GNU General Public License v3.0.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is corralctl?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "corralctl is a free, open-source command-line tool and MCP server, written in Go under the GPL-3.0, that clones your repositories from six forges into one organised local layout and keeps them in sync."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which forges does it work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GitHub, GitLab, Gitea, Forgejo, Codeberg and Bitbucket. Repositories cloned by hand from any other host still work with the index, the MCP server and symbol lookup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it delete repositories that were deleted on the forge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not during a normal run. --orphans reports them, and the explicit prune command removes only those that pass the unpublished-work checks, after you confirm with --yes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run it from cron or a systemd timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It runs non-interactively by default and every git credential prompt is turned off, so a scheduled run never hangs waiting for input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do repositories with no primary language go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Into the Other ecosystem folder, for example Public/Other/my-repo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on Windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Binaries are published for Windows, but macOS Finder tags do nothing there and it is less tested than on macOS and Linux; WSL is the better-tested route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it a backup tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It clones working copies to read and edit. For archival copies that keep every ref, use git clone --mirror or a purpose-built backup tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the MCP server send my code anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in its default read-only mode: it makes no network calls and never contacts the GitHub API. Only the opt-in clone and sync tools reach the network, through git."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing. corralctl is free software under the GNU General Public License v3.0."
+      }
+    }
+  ]
+}
+</script>

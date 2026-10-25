@@ -1,43 +1,70 @@
 ---
 name: "Corral"
-short_name: "corrallib"
-title: "Workspace Configuration Examples & Manifests"
-description: "Sample Corral.toml configurations for microservices, financial pipelines, and open-source ecosystems."
-keywords: "corral examples, Corral.toml examples"
+short_name: "Corral"
+title: "Examples: forges, profiles, exec, mirroring and JSON output | Corral"
+description: "Copy-paste corralctl commands for GitLab, Codeberg and self-hosted Gitea, multi-owner profiles, running a command in every clone, mirroring with a dry run, and machine-readable output."
+keywords: "corralctl examples, clone gitlab group, clone codeberg repositories, git exec all repos, mirror github to gitlab"
 author: "Sebastien Rousseau"
-date: "2026-09-01"
-language: "en-GB"
+date: "2026-10-25"
+news_publication_date: "2026-10-25"
 layout: "page"
-permalink: "https://corrallib.com/examples/index.html"
-logo: "/logo.svg"
-banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
-banner_alt: "Corral — High-Performance Repository & Workspace Engine"
+language: "en-GB"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "Examples"
+headline: "corralctl commands you can copy"
+lead: "Each example is a real command from the corralctl documentation. Swap in your own owner names."
+nav_docs: "true"
 ---
+## Clone from forges other than GitHub
 
-# Workspace Examples
+```bash
+corralctl my-group --forge gitlab
+corralctl my-user --forge codeberg
+corralctl my-org --forge gitea --forge-url https://git.example.com
+corralctl my-workspace --forge bitbucket
+```
 
-## 1. Financial Systems Workspace Example
+## Pick repositories before cloning
 
-```toml
-[workspace]
-name = "cib-financial-infrastructure"
-version = "0.0.1"
+```bash
+corralctl -i my-username
+```
 
-[[repositories]]
-name = "kyberlib"
-url = "git@github.com:sebastienrousseau/kyberlib.git"
-branch = "main"
-destination = "libs/crypto/kyberlib"
+## Run a command in every clone
 
-[[repositories]]
-name = "bankstatementparser"
-url = "git@github.com:sebastienrousseau/bankstatementparser.git"
-branch = "main"
-destination = "libs/parsers/bankstatementparser"
+```bash
+corralctl exec "git status -s" --languages go,rust --visibility private
+```
 
-[[repositories]]
-name = "hsh"
-url = "git@github.com:sebastienrousseau/hsh.git"
-branch = "main"
-destination = "libs/crypto/hsh"
+## Mirror to two other forges, previewing first
+
+```bash
+export GITLAB_TOKEN=...
+export GITEA_TOKEN=...
+corralctl sync --to gitlab --to gitea@https://git.example.com --dry-run
+corralctl sync --to gitlab --to gitea@https://git.example.com
+```
+
+## Keep your existing folder structure
+
+```bash
+corralctl my-org --layout "OWNER/NAME"
+```
+
+`OWNER` and `NAME` stand for the `.Owner` and `.Name` template placeholders;
+the [features page](/features/#organised-layout) lists them all.
+
+## Machine-readable results
+
+```bash
+corralctl my-username --output json --log-level error > repos.json
+```
+
+## Housekeeping
+
+```bash
+corralctl status --base-dir ~/Code
+corralctl doctor ~/Code --prune-worktrees
+corralctl prune my-username --dry-run
 ```

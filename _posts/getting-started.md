@@ -1,66 +1,86 @@
 ---
 name: "Corral"
-short_name: "corrallib"
-title: "Getting Started with Corral: Installation & Quickstart"
-description: "How to install Corral via Cargo, Homebrew, and Docker alongside step-by-step workspace initialization guides."
-keywords: "install corral, cargo corrallib, git workspace setup"
+short_name: "Corral"
+title: "Getting started: install corralctl and organise your repositories | Corral"
+description: "Install corralctl with mise, Homebrew, the AUR, Nix or go install, sign in to GitHub, and clone and organise every repository you own with one command."
+keywords: "install corralctl, corralctl homebrew, corralctl quick start, clone all repositories github"
 author: "Sebastien Rousseau"
-date: "2026-09-01"
-language: "en-GB"
+date: "2026-10-25"
+news_publication_date: "2026-10-25"
 layout: "page"
-permalink: "https://corrallib.com/getting-started/index.html"
-logo: "/logo.svg"
-banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
-banner_alt: "Corral — High-Performance Repository & Workspace Engine"
+language: "en-GB"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "Getting started"
+headline: "Install corralctl and organise your repositories"
+lead: "You need git 2.30 or newer. Installing takes one command, and so does your first organised workspace."
+nav_docs: "true"
 ---
+## Install
 
-# Getting Started with Corral
+Pick the method that matches how you manage tools.
 
-Corral provides a unified developer workflow for multi-repository codebases.
+**mise (macOS and Linux)**
 
-## 1. Installation
-
-### Install via Cargo (Rust)
 ```bash
-cargo install corrallib
+mise use -g github:sebastienrousseau/corralctl
 ```
 
-### Run via Docker
+**Homebrew (macOS)**
+
 ```bash
-docker run --rm -v $(pwd):/workspace ghcr.io/sebastienrousseau/corrallib:latest sync
+brew install sebastienrousseau/tap/corralctl
 ```
 
----
+**Arch Linux (AUR)**
 
-## 2. Quickstart Workflow
-
-### Initialize a Workspace
 ```bash
-cd ~/Code/Workspaces
-corral init
+yay -S corralctl-bin
 ```
 
-This generates a template `Corral.toml` manifest in the current directory:
+**Nix (any platform)**
 
-```toml
-[workspace]
-name = "financial-services-stack"
-version = "0.0.1"
-
-[[repositories]]
-name = "kyberlib"
-url = "https://github.com/sebastienrousseau/kyberlib.git"
-branch = "main"
-destination = "crypto/kyberlib"
-
-[[repositories]]
-name = "bankstatementparser"
-url = "https://github.com/sebastienrousseau/bankstatementparser.git"
-branch = "main"
-destination = "parsers/bankstatementparser"
-```
-
-### Sync All Repositories
 ```bash
-corral sync
+nix profile install github:sebastienrousseau/corralctl
 ```
+
+**Go toolchain**
+
+```bash
+go install github.com/sebastienrousseau/corralctl/cmd/corralctl@latest
+```
+
+A binary built with `go install` reports its version as `dev`; use a release
+build if you need `--version`. On Linux you can also install the `.deb` or
+`.rpm` packages attached to each
+[release](https://github.com/sebastienrousseau/corralctl/releases/latest).
+
+## Quick start
+
+```bash
+# Sign in to the GitHub CLI once (or set GITHUB_TOKEN)
+gh auth login
+
+# Clone and organise every repository you own
+corralctl clone my-username
+```
+
+Clones land under `~/Code` by default, in `Public/`, `Private/` and `Forks/`,
+then by language. Run the same command again later and it only clones what is
+new and pulls what changed.
+
+## What to run next
+
+| Command | Does |
+| :--- | :--- |
+| `corralctl plan <owner>` | Preview a run without touching disk |
+| `corralctl status` | Inventory the clones and their state |
+| `corralctl exec "<cmd>"` | Run a command in every clone |
+| `corralctl sync --to <forge>` | Mirror the tree to another forge |
+| `corralctl prune <owner>` | Remove clones gone upstream, refusing unpublished work |
+| `corralctl mcp` | Serve the workspace to AI agents |
+
+Other forges take `--forge`, for example
+`corralctl my-group --forge gitlab`. The full list of commands and flags is in
+the [command reference](/documentation/), and `man corralctl` works offline
+once it is installed.
