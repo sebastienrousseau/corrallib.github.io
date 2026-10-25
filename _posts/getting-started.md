@@ -9,7 +9,7 @@ date: "2026-09-01"
 language: "en-GB"
 layout: "page"
 permalink: "https://corrallib.com/getting-started/index.html"
-logo: "https://cloudcdn.pro/cmn/v1/logos/cmn.svg"
+logo: "/logo.svg"
 banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
 banner_alt: "Corral — High-Performance Repository & Workspace Engine"
 ---
