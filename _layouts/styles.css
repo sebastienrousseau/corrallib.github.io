@@ -33,24 +33,24 @@
      light` viewer sees. */
   :root,
   :root[data-theme="light"] {
-    --bg: #faf8f5;
-    --bg-soft: #f3efea;
+    --bg: #fafafa;
+    --bg-soft: #f4f4f5;
     --surface: #ffffff;
-    --surface-soft: #f4f0ea;
+    --surface-soft: #f4f4f5;
 
-    --ink: #0b192c;
-    --ink-soft: #2f3d50;
-    --ink-muted: #46515f;
+    --ink: #18181b;
+    --ink-soft: #3f3f46;
+    --ink-muted: #52525b;
 
-    --accent: #1e40af;
-    --accent-hover: #172f85;
+    --accent: #9f1239;
+    --accent-hover: #881337;
     --accent-ink: #ffffff;
-    --accent-soft: #e3eafb;
-    --on-accent-soft: #172f85;
+    --accent-soft: #ffe4e6;
+    --on-accent-soft: #881337;
 
-    --line: #8a8079;
-    --line-soft: #e8e2d9;
-    --focus: #1d4ed8;
+    --line: #71717a;
+    --line-soft: #e4e4e7;
+    --focus: #be123c;
 
     /* Semantic tints: a text token on a soft ground, each pair gated. */
     --green-text: #1b4332;
@@ -64,15 +64,15 @@
     --burgundy-soft: #f8ecef;
 
     /* The dark surfaces, the same in both schemes. */
-    --hero-bg: #0b192c;
-    --hero-surface: #142a47;
+    --hero-bg: #111113;
+    --hero-surface: #1f1f23;
     --hero-ink: #ffffff;
-    --hero-ink-soft: #cbd6e4;
-    --hero-line: #5b6d86;
-    --hero-accent: #a9c4ff;
-    --hero-clay: #f4b39a;
-    --hero-gold: #dfb86c;
-    --hero-stage: rgb(20 42 71 / 55%);
+    --hero-ink-soft: #d4d4d8;
+    --hero-line: #71717a;
+    --hero-accent: #fda4af;
+    --hero-clay: #fca5a5;
+    --hero-gold: #fca5a5;
+    --hero-stage: rgb(31 31 35 / 55%);
 
     /* Icon-badge gradient stops. Tokens rather than literals inside the
        component rule, so `scripts/contrast.py` can hold the white glyph
@@ -80,8 +80,8 @@
        one that decides whether the icon is visible. Two of these were
        hand-picked at 2.5:1 before the gate covered them. */
     --badge-ink: #ffffff;
-    --badge-blue-from: #1e40af;
-    --badge-blue-to: #3b82f6;
+    --badge-blue-from: #9f1239;
+    --badge-blue-to: #e11d48;
     --badge-clay-from: #b05a3f;
     --badge-clay-to: #cf7e66;
     --badge-green-from: #2d6a4f;
@@ -90,23 +90,23 @@
     --badge-gold-to: #af8e4f;
     --badge-burgundy-from: #6b1d2f;
     --badge-burgundy-to: #8d2840;
-    --badge-navy-from: #0b192c;
-    --badge-navy-to: #1e40af;
+    --badge-navy-from: #18181b;
+    --badge-navy-to: #3f3f46;
 
     /* Code window. */
-    --code-bg: #071221;
-    --code-bar: #0d1e35;
-    --code-plain: #eef3f9;
-    --code-keyword: #f4b39a;
-    --code-function: #8fc0ff;
-    --code-string: #e7cd8a;
-    --code-comment: #9db0c8;
-    --code-property: #b9d4ff;
-    --code-number: #8be0b4;
+    --code-bg: #0c0c0e;
+    --code-bar: #18181b;
+    --code-plain: #f4f4f5;
+    --code-keyword: #fda4af;
+    --code-function: #fdba74;
+    --code-string: #fde68a;
+    --code-comment: #b4b4bc;
+    --code-property: #fecdd3;
+    --code-number: #86efac;
 
-    --shadow-sm: 0 1px 3px rgb(11 25 44 / 8%);
-    --shadow-md: 0 12px 32px -12px rgb(11 25 44 / 22%);
-    --shadow-lg: 0 30px 60px -24px rgb(11 25 44 / 35%);
+    --shadow-sm: 0 1px 3px rgb(24 24 27 / 8%);
+    --shadow-md: 0 12px 32px -12px rgb(24 24 27 / 22%);
+    --shadow-lg: 0 30px 60px -24px rgb(24 24 27 / 35%);
 
     color-scheme: light;
   }
@@ -115,24 +115,24 @@
      still wins on a dark OS. */
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0a1220;
-      --bg-soft: #0e1a2c;
-      --surface: #132238;
-      --surface-soft: #1a2d47;
+      --bg: #0c0c0e;
+      --bg-soft: #111113;
+      --surface: #18181b;
+      --surface-soft: #202024;
 
-      --ink: #f2f5f9;
-      --ink-soft: #d3dce7;
-      --ink-muted: #b2bfcf;
+      --ink: #fafafa;
+      --ink-soft: #d4d4d8;
+      --ink-muted: #b4b4bc;
 
-      --accent: #a6c2ff;
-      --accent-hover: #c4d6ff;
-      --accent-ink: #0b192c;
-      --accent-soft: #213b6c;
-      --on-accent-soft: #dbe6ff;
+      --accent: #fda4af;
+      --accent-hover: #fecdd3;
+      --accent-ink: #18181b;
+      --accent-soft: #4c0519;
+      --on-accent-soft: #ffe4e6;
 
-      --line: #7b8aa1;
-      --line-soft: #26384f;
-      --focus: #9dbdff;
+      --line: #71717a;
+      --line-soft: #27272a;
+      --focus: #fb7185;
 
       --green-text: #a7dcc1;
       --green-soft: #173628;
@@ -144,15 +144,15 @@
       --burgundy-text: #f0a9b8;
       --burgundy-soft: #3d1a23;
 
-      --hero-bg: #0b192c;
-      --hero-surface: #142a47;
+      --hero-bg: #111113;
+      --hero-surface: #1f1f23;
       --hero-ink: #ffffff;
-      --hero-ink-soft: #cbd6e4;
-      --hero-line: #5b6d86;
-      --hero-accent: #a9c4ff;
-      --hero-clay: #f4b39a;
-      --hero-gold: #dfb86c;
-      --hero-stage: rgb(20 42 71 / 55%);
+      --hero-ink-soft: #d4d4d8;
+      --hero-line: #71717a;
+      --hero-accent: #fda4af;
+      --hero-clay: #fca5a5;
+      --hero-gold: #fca5a5;
+      --hero-stage: rgb(31 31 35 / 55%);
 
       /* Icon-badge gradient stops. Tokens rather than literals inside the
          component rule, so `scripts/contrast.py` can hold the white glyph
@@ -160,8 +160,8 @@
          one that decides whether the icon is visible. Two of these were
          hand-picked at 2.5:1 before the gate covered them. */
       --badge-ink: #ffffff;
-      --badge-blue-from: #1e40af;
-      --badge-blue-to: #3b82f6;
+      --badge-blue-from: #9f1239;
+      --badge-blue-to: #e11d48;
       --badge-clay-from: #b05a3f;
       --badge-clay-to: #cf7e66;
       --badge-green-from: #2d6a4f;
@@ -170,18 +170,18 @@
       --badge-gold-to: #af8e4f;
       --badge-burgundy-from: #6b1d2f;
       --badge-burgundy-to: #8d2840;
-      --badge-navy-from: #0b192c;
-      --badge-navy-to: #1e40af;
+      --badge-navy-from: #18181b;
+      --badge-navy-to: #3f3f46;
 
-      --code-bg: #071221;
-      --code-bar: #0d1e35;
-      --code-plain: #eef3f9;
-      --code-keyword: #f4b39a;
-      --code-function: #8fc0ff;
-      --code-string: #e7cd8a;
-      --code-comment: #9db0c8;
-      --code-property: #b9d4ff;
-      --code-number: #8be0b4;
+      --code-bg: #0c0c0e;
+      --code-bar: #18181b;
+      --code-plain: #f4f4f5;
+      --code-keyword: #fda4af;
+      --code-function: #fdba74;
+      --code-string: #fde68a;
+      --code-comment: #b4b4bc;
+      --code-property: #fecdd3;
+      --code-number: #86efac;
 
       --shadow-sm: 0 1px 3px rgb(0 0 0 / 55%);
       --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 70%);
@@ -193,24 +193,24 @@
 
   /* The toggle wins in both directions. */
   :root[data-theme="dark"] {
-    --bg: #0a1220;
-    --bg-soft: #0e1a2c;
-    --surface: #132238;
-    --surface-soft: #1a2d47;
+    --bg: #0c0c0e;
+    --bg-soft: #111113;
+    --surface: #18181b;
+    --surface-soft: #202024;
 
-    --ink: #f2f5f9;
-    --ink-soft: #d3dce7;
-    --ink-muted: #b2bfcf;
+    --ink: #fafafa;
+    --ink-soft: #d4d4d8;
+    --ink-muted: #b4b4bc;
 
-    --accent: #a6c2ff;
-    --accent-hover: #c4d6ff;
-    --accent-ink: #0b192c;
-    --accent-soft: #213b6c;
-    --on-accent-soft: #dbe6ff;
+    --accent: #fda4af;
+    --accent-hover: #fecdd3;
+    --accent-ink: #18181b;
+    --accent-soft: #4c0519;
+    --on-accent-soft: #ffe4e6;
 
-    --line: #7b8aa1;
-    --line-soft: #26384f;
-    --focus: #9dbdff;
+    --line: #71717a;
+    --line-soft: #27272a;
+    --focus: #fb7185;
 
     --green-text: #a7dcc1;
     --green-soft: #173628;
@@ -222,15 +222,15 @@
     --burgundy-text: #f0a9b8;
     --burgundy-soft: #3d1a23;
 
-    --hero-bg: #0b192c;
-    --hero-surface: #142a47;
+    --hero-bg: #111113;
+    --hero-surface: #1f1f23;
     --hero-ink: #ffffff;
-    --hero-ink-soft: #cbd6e4;
-    --hero-line: #5b6d86;
-    --hero-accent: #a9c4ff;
-    --hero-clay: #f4b39a;
-    --hero-gold: #dfb86c;
-    --hero-stage: rgb(20 42 71 / 55%);
+    --hero-ink-soft: #d4d4d8;
+    --hero-line: #71717a;
+    --hero-accent: #fda4af;
+    --hero-clay: #fca5a5;
+    --hero-gold: #fca5a5;
+    --hero-stage: rgb(31 31 35 / 55%);
 
     /* Icon-badge gradient stops. Tokens rather than literals inside the
        component rule, so `scripts/contrast.py` can hold the white glyph
@@ -238,8 +238,8 @@
        one that decides whether the icon is visible. Two of these were
        hand-picked at 2.5:1 before the gate covered them. */
     --badge-ink: #ffffff;
-    --badge-blue-from: #1e40af;
-    --badge-blue-to: #3b82f6;
+    --badge-blue-from: #9f1239;
+    --badge-blue-to: #e11d48;
     --badge-clay-from: #b05a3f;
     --badge-clay-to: #cf7e66;
     --badge-green-from: #2d6a4f;
@@ -248,18 +248,18 @@
     --badge-gold-to: #af8e4f;
     --badge-burgundy-from: #6b1d2f;
     --badge-burgundy-to: #8d2840;
-    --badge-navy-from: #0b192c;
-    --badge-navy-to: #1e40af;
+    --badge-navy-from: #18181b;
+    --badge-navy-to: #3f3f46;
 
-    --code-bg: #071221;
-    --code-bar: #0d1e35;
-    --code-plain: #eef3f9;
-    --code-keyword: #f4b39a;
-    --code-function: #8fc0ff;
-    --code-string: #e7cd8a;
-    --code-comment: #9db0c8;
-    --code-property: #b9d4ff;
-    --code-number: #8be0b4;
+    --code-bg: #0c0c0e;
+    --code-bar: #18181b;
+    --code-plain: #f4f4f5;
+    --code-keyword: #fda4af;
+    --code-function: #fdba74;
+    --code-string: #fde68a;
+    --code-comment: #b4b4bc;
+    --code-property: #fecdd3;
+    --code-number: #86efac;
 
     --shadow-sm: 0 1px 3px rgb(0 0 0 / 55%);
     --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 70%);
@@ -971,11 +971,11 @@
     inset: 6%;
     border-radius: 45%;
     background:
-      radial-gradient(at 15% 20%, #1d4ed8 0, transparent 50%),
-      radial-gradient(at 85% 15%, #c86d51 0, transparent 45%),
-      radial-gradient(at 20% 80%, #2d6a4f 0, transparent 45%),
-      radial-gradient(at 80% 80%, #3b82f6 0, transparent 50%),
-      radial-gradient(at 50% 50%, #c5a059 0, transparent 40%);
+      radial-gradient(at 15% 20%, #9f1239 0, transparent 50%),
+      radial-gradient(at 85% 15%, #f56b5e 0, transparent 45%),
+      radial-gradient(at 20% 80%, #881337 0, transparent 45%),
+      radial-gradient(at 80% 80%, #f87171 0, transparent 50%),
+      radial-gradient(at 50% 50%, #e11d48 0, transparent 40%);
     filter: blur(40px);
     pointer-events: none;
     /* Behind the stage's own background, not among the cards.
@@ -1827,39 +1827,6 @@
   }
 }
 
-/* ---------------------------------------------------------------------
-   Wide colour (Display P3).
-
-   Every token above is sRGB and stays that way — this block only runs
-   where the display can actually show more, and only the chromatic
-   tokens are restated. Each colour keeps its luminance exactly and gains
-   about a fifth more chroma, which is the part sRGB was clipping.
-   Because luminance is unchanged, contrast is too: `scripts/contrast.py`
-   checks these P3 values against the same thresholds as the sRGB ones,
-   via their XYZ luminance.
-   --------------------------------------------------------------------- */
-@media (color-gamut: p3) {
-  :root,
-  :root[data-theme="light"] {
-    --accent: color(display-p3 0.0977 0.2373 0.7076);
-    --accent-hover: color(display-p3 0.0760 0.1737 0.5381);
-    --focus: color(display-p3 0.0787 0.2882 0.8733);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --accent: color(display-p3 0.6527 0.7568 1.0000);
-      --accent-hover: color(display-p3 0.7699 0.8368 1.0000);
-      --focus: color(display-p3 0.6178 0.7368 1.0000);
-    }
-  }
-
-  :root[data-theme="dark"] {
-    --accent: color(display-p3 0.6527 0.7568 1.0000);
-    --accent-hover: color(display-p3 0.7699 0.8368 1.0000);
-    --focus: color(display-p3 0.6178 0.7368 1.0000);
-  }
-}
 
 /* WCAG 2.5.5 Target Size (Enhanced, AAA) — 44x44 CSS px.
  *

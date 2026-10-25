@@ -16,7 +16,8 @@ trap 'kill "$server"' EXIT
 for _ in $(seq 1 50); do curl -fs "http://127.0.0.1:$port/" >/dev/null && break; sleep 0.1; done
 
 mkdir -p static/images
+# Light scheme pinned, so the image does not depend on the machine's appearance.
 "$chrome" --headless=new --disable-gpu --hide-scrollbars --window-size=1500,1000 \
-  --force-device-scale-factor=1 --screenshot="$PWD/static/images/screenshot.png" \
+  --blink-settings=preferredColorScheme=1 --force-device-scale-factor=1 --screenshot="$PWD/static/images/screenshot.png" \
   "http://127.0.0.1:$port/" >/dev/null 2>&1
 echo "wrote static/images/screenshot.png"
