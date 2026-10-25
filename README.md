@@ -1,20 +1,28 @@
 <!-- SPDX-License-Identifier: Apache-2.0 OR MIT -->
+<!--
+README template. Global rules: see ~/Code/AGENTS.md and ~/Code/REPO-STANDARD.md.
+Releases adhere strictly to https://github.com/sebastienrousseau/passmcp/releases/tag/v0.0.5
+-->
 
 <p align="center">
-  <img src="https://cloudcdn.pro/cmn/v1/logos/cmn.svg" alt="Corral logo" width="128" />
+  <img src="static/logo.svg" alt="Corral logo" width="128" />
 </p>
 
-<h1 align="center">Corral</h1>
+<h1 align="center">corrallib.com</h1>
 
 <p align="center">
-  High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections.
+  The website for Corral and its corralctl command-line tool, built with Static Site Generator and the Prism theme.
 </p>
 
 <p align="center">
-  <a href="https://github.com/sebastienrousseau/corrallib.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/corrallib.github.io/ci.yml?style=for-the-badge&logo=github" alt="Build" /></a>
-  <a href="https://github.com/sebastienrousseau/corrallib.github.io/releases"><img src="https://img.shields.io/github/v/release/sebastienrousseau/corrallib.github.io?style=for-the-badge&color=fc8d62&logo=git" alt="Release" /></a>
-  <a href="https://static-site-generator.com/"><img src="https://img.shields.io/badge/SSG-0.0.56-66c2a5?style=for-the-badge&labelColor=555555&logo=rust" alt="Built with SSG" /></a>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/corrallib.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/corrallib.github.io?style=for-the-badge&label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
+  <a href="https://github.com/sebastienrousseau/corrallib.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/corrallib.github.io/pages.yml?style=for-the-badge&logo=github" alt="Build" height="28" /></a>
+  <a href="https://corrallib.com/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fcorrallib.com&style=for-the-badge&labelColor=555555&label=corrallib.com" alt="Website" height="28" /></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/corrallib.github.io"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/corrallib.github.io?style=for-the-badge&label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" height="28" /></a>
+  <a href="LICENSE-MIT"><img src="https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue.svg?style=for-the-badge" alt="License: Apache-2.0 OR MIT" height="28" /></a>
+</p>
+
+<p align="center">
+  <img src="static/images/screenshot.png" alt="The corrallib.com home page: the Corral masthead, the headline Clone and organise every repository you own, and cards for symbol lookup, smart sync and a refused prune" width="100%" />
 </p>
 
 ---
@@ -23,105 +31,193 @@
 
 **Getting started**
 
-- [Overview](#overview) — architecture and design principles
-- [Quick Start](#quick-start) — build and serve locally in minutes
+- [Install](#install) — what to install to build the site
+- [Requirements](#requirements) — ssg, Python, Chrome for the screenshot
+- [Quick Start](#quick-start) — build, check and preview locally
 
-**Ecosystem & Architecture**
+**The corrallib.com ecosystem**
 
-- [Features](#features) — core capabilities and performance highlights
-- [Technology Stack](#technology-stack) — SSG, Rust, and modern web standards
-- [Accessibility & Compliance](#accessibility--compliance) — 100% WCAG 2.1 AAA and Lighthouse scores
+- [The corrallib.com ecosystem](#the-corrallibcom-ecosystem) — the site, the tool it describes, the theme and the generator
+
+**Library reference**
+
+- [Capabilities at a glance](#capabilities-at-a-glance) — what the build produces and checks
+- [Ecosystem comparison](#ecosystem-comparison) — not applicable to a website
+- [Benchmarks](#benchmarks) — not applicable to a website
+- [Features](#features) — pages and structure
+- [Configuration](#configuration) — `ssg.toml` and the content schema
+- [Examples](#examples) — not applicable to a website
 
 **Operational**
 
-- [Development](#development) — make targets, quality gates, and automated testing
-- [Security](#security) — Subresource Integrity (SRI) and Content Security Policy (CSP)
-- [License](#license) — dual Apache-2.0 and MIT licensing
+- [When not to use corrallib.com](#when-not-to-use-corrallibcom) — where the reference lives instead
+- [Development](#development) — make targets and CI
+- [Security](#security) — CSP, SRI and supply chain
+- [Documentation](#documentation) — where each part is described
+- [Stability guarantees](#stability-guarantees) — URLs and build output
+- [License](#license)
 
 ---
 
-## Overview
+## Install
 
-`corrallib.github.io` is engineered for speed, privacy, and accessibility. Built with **Static Site Generator (SSG)** and the **Skeletonic Design System**, it delivers lightning-fast static page generation, zero third-party tracking cookies, and responsive Apple Human Interface Guidelines (HIG) navigation.
+### As a website project
+
+```bash
+git clone https://github.com/sebastienrousseau/corrallib.github.io.git
+cd corrallib.github.io
+```
+
+Install `ssg` 0.0.69 or newer from its
+[releases](https://github.com/sebastienrousseau/static-site-generator/releases)
+or with `cargo install ssg`.
+
+---
+
+## Requirements
+
+- **ssg** 0.0.69 or newer on `PATH` (CI pins the 0.0.69 release by SHA-256).
+- **Python** 3.11 or newer, for the post-build scripts.
+- **Chrome or Chromium**, only for `make screenshot`.
 
 ---
 
 ## Quick Start
 
-### Prerequisites
-
-Ensure you have `ssg` installed via Cargo:
-
 ```bash
-cargo install ssg
+make build   # build into docs/ and run every check
+make serve   # build, then serve on http://127.0.0.1:8000
 ```
 
-### Local Build & Development
+`make build` fails if any check fails, so a passing build is a deployable one.
 
-Clone the repository and compile the static assets:
+---
 
-```bash
-git clone https://github.com/sebastienrousseau/corrallib.github.io.git
-cd corrallib.github.io
+## The corrallib.com ecosystem
 
-# Compile with Static Site Generator (SSG)
-ssg build --content _posts --template _layouts --output docs
+corrallib.com describes [corralctl](https://github.com/sebastienrousseau/corralctl),
+a Go command-line tool and MCP server, and is generated by
+[Static Site Generator](https://github.com/sebastienrousseau/static-site-generator).
 
-# Or serve locally using Makefile
-make serve
-```
+| Component | Purpose | Use case |
+| :--- | :--- | :--- |
+| corrallib.github.io | This repository: content, layouts and build scripts | Changing the website |
+| corralctl | The tool the site documents; its README is the source of every fact here | Using Corral |
+| Prism theme | The design, from ssg-themes.github.io (MIT, see `LICENSES/`) | Restyling the site |
+| Static Site Generator | Builds and audits the site | Building locally and in CI |
+
+---
+
+## Capabilities at a glance
+
+| Area | Capability | Status |
+| :--- | :--- | :--- |
+| Build | ssg compiles `_posts/` with `_layouts/` into `docs/` | Stable |
+| Checks | ssg quality gate, heading anchors, cross-page `#fragment` links, SRI hashes, `ssg audit` | Enforced in CI |
+| Deploy | GitHub Actions to GitHub Pages; nothing built is committed | Stable |
+| Search | ssg's search widget in the header slot | Stable |
+| Structured data | WebSite, SoftwareApplication, Person, WebPage, FAQPage | Stable |
+
+---
+
+## Ecosystem comparison
+
+Not applicable: this repository is a website, not a library.
+
+---
+
+## Benchmarks
+
+Not applicable: this repository is a website. corralctl's published figures
+are on the site's [performance page](https://corrallib.com/benchmarks/).
 
 ---
 
 ## Features
 
-- **Static Site Generator (SSG) Compilation**: High-throughput Markdown and Tera template processing with pre-rendered HTML.
-- **Apple HIG Responsive Navigation**: Sticky blur glass header with horizontal/vertical element alignment, squarcle buttons, and mobile hamburger drawer.
-- **Subresource Integrity (SRI)**: SHA-384 cryptographic hashing on all external and internal stylesheets and scripts.
-- **Content Security Policy (CSP)**: Hardened security headers restricting unvetted origins while permitting high-performance execution.
-- **Full Client Search Engine**: Instant multi-term indexing and live modal search via `search-index.json`.
-- **System Theme Auto-Detection**: Instant switching between Light, Dark, and System modes with zero visual flash.
-- **100% WCAG AAA Compliance**: High contrast ratios, full keyboard navigation, ARIA landmarks, and semantic heading hierarchies.
+- Twenty pages: home, features, use cases, MCP server, getting started,
+  command reference, examples, how it works, performance, security, FAQ,
+  about, changelog, contributing, contact, accessibility, privacy, terms,
+  colophon and 404.
+- A shared header and footer in `_layouts/`, written once for the site.
+- Every fact about corralctl is taken from its README, CHANGELOG and
+  CONTRIBUTING; nothing is illustrative.
 
 ---
 
-## Technology Stack
+## Configuration
 
-| Component | Technology | Description |
-|---|---|---|
-| **Static Engine** | [Static Site Generator (SSG)](https://static-site-generator.com/) | High-speed Rust static site generator |
-| **Design Framework** | [Skeletonic CSS](https://skeletonic.io) | Minimalist, zero-dependency layout engine |
-| **Icons & Assets** | [CloudCDN](https://cloudcdn.pro) | Distributed edge CDN for SVG vector assets |
-| **Runtime** | Vanilla ECMAScript | Zero runtime framework overhead |
+- `ssg.toml`: site name, description, `base_url` and the content, template
+  and output directories.
+- `_posts/content.schema.toml`: the front-matter fields every page must
+  carry; ssg fails the build when one is missing.
+
+---
+
+## Examples
+
+Not applicable: this repository is a website. corralctl's examples are on the
+site's [examples page](https://corrallib.com/examples/).
+
+---
+
+## When not to use corrallib.com
+
+The site summarises corralctl for people deciding whether to use it. The
+reference is the corralctl repository's README and the user manual at
+<https://doc.corrallib.com/>; when they disagree with this site, they win.
 
 ---
 
 ## Development
 
-Run automated regression tests and the 10-pillar quality audit:
-
 ```bash
-# Run repository regression test
-python3 scripts/regression-test.py
-
-# Run portfolio master quality gate
-make test
+make build       # ssg build, anchors, post-build checks, ssg audit
+make serve       # build and serve locally
+make screenshot  # render static/images/screenshot.png from the build
+make clean       # remove build output
 ```
+
+`.github/workflows/quality-gate.yml` runs `make build` on every pull request.
+`.github/workflows/pages.yml` runs it on `main` and deploys `docs/` to
+GitHub Pages.
 
 ---
 
 ## Security
 
-Every deployment adheres to strict security and integrity standards:
+Every page carries a strict Content Security Policy: scripts, styles and
+images from this origin only, and form submissions to this origin and
+Formspree. Every local script and stylesheet carries a Subresource Integrity
+hash, which the build verifies against the file. CI installs ssg from its
+release and checks the archive against a pinned SHA-256.
 
-- **Zero Inline Code Execution**: All scripts are isolated and digest-verified.
-- **Cryptographic Asset Integrity**: Guaranteed Subresource Integrity via SHA-384 digests.
-- **Privacy by Default**: No user tracking, analytics cookies, or third-party fingerprinting.
+Report vulnerabilities according to [`SECURITY.md`](SECURITY.md).
+
+---
+
+## Documentation
+
+- The website: <https://corrallib.com/>
+- corralctl: <https://github.com/sebastienrousseau/corralctl>
+- The user manual: <https://doc.corrallib.com/>
+- Static Site Generator: <https://github.com/sebastienrousseau/static-site-generator>
+- Third-party licences: [`LICENSES/`](LICENSES/)
+
+---
+
+## Stability guarantees
+
+Page URLs are kept across redesigns, so links to the site keep working. The
+exceptions are `/api/`, `/offline/` and `/thanks/`, removed in 0.0.3: the
+first described a Rust crate that does not exist, and the other two belonged
+to the previous design. The sitemap is dated by the last commit, and CI pins
+the ssg release it builds with.
 
 ---
 
 ## License
 
-Copyright © 2024 - 2026 Sebastien Rousseau. All rights reserved.
-
-Licensed under the Apache License, Version 2.0 or the MIT license at your option.
+The site's source is available under [Apache-2.0](LICENSE-APACHE) or
+[MIT](LICENSE-MIT), at your option. The Prism theme files in `_layouts/` are
+MIT-licensed; see [`LICENSES/`](LICENSES/). corralctl itself is GPL-3.0.

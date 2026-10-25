@@ -1,31 +1,28 @@
 # SPDX-License-Identifier: Apache-2.0 OR MIT
-# Semantic Version: v0.0.1
-.PHONY: all build audit test contrast validate compress prune clean help
+.PHONY: all build serve screenshot clean help
 
 all: build
 
 help:
-	@echo "Available Makefile targets:"
-	@echo "  make build      - Compile static site using Rust static-site-generator"
-	@echo "  make audit      - Run WCAG 2.2 AAA and regression tests"
-	@echo "  make contrast   - Verify color tokens against WCAG 2.2 AAA math ratios"
-	@echo "  make validate   - Validate Markdown frontmatter schema integrity"
-	@echo "  make clean      - Remove build artifacts and temporary files"
+	@echo "make build  - build the site into docs/ and run every check"
+	@echo "make serve  - build, then serve docs/ on http://127.0.0.1:8000"
+	@echo "make screenshot - render static/images/screenshot.png from the build"
+	@echo "make clean  - remove build output"
 
+# ssg's own quality gate runs inside post-build.py; `ssg audit` then checks
+# the final files (WCAG, JSON-LD, CSP/SRI, links, metadata, feeds...).
 build:
 	rm -rf docs
 	ssg build -f ssg.toml -q
+	python3 scripts/anchor_headings.py docs
 	python3 scripts/post-build.py
+	ssg audit -o docs -f ssg.toml --skip-network
 
-audit: contrast validate
-	@/usr/bin/python3 scripts/regression-test.py
+serve: build
+	python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
 
-contrast:
-	@/usr/bin/python3 scripts/audit-contrast.py
-
-validate:
-	@/usr/bin/python3 scripts/validate-frontmatter.py
+screenshot: build
+	scripts/screenshot.sh
 
 clean:
-	@rm -rf public docs dist .cache coverage *.log
-	@echo "Workspace cleaned."
+	rm -rf docs public .cache

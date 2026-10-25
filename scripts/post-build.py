@@ -38,6 +38,15 @@ def last_commit_date() -> str:
     return out.stdout.strip() or "1970-01-01"
 
 
+def source_date(page: Path) -> str:
+    """Last commit date of the Markdown file a built page comes from."""
+    rel = page.parent.relative_to(OUT)
+    src = Path(CONFIG["content_dir"]) / (f"{rel}.md" if str(rel) != "." else "index.md")
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(src)],
+                         capture_output=True, text=True, check=False)
+    return out.stdout.strip() or last_commit_date()
+
+
 def fix_page(page: Path) -> str | None:
     text = page.read_text(encoding="utf-8")
     for dev in ("http://127.0.0.1:8000", "http://localhost:8000"):
@@ -47,6 +56,9 @@ def fix_page(page: Path) -> str | None:
     if url:
         text = re.sub(r'(<meta property="og:url" content=")[^"]*(")', rf"\g<1>{url}\g<2>", text)
         text = re.sub(r'(<link rel="alternate" href=")[^"]*(" hreflang=)', rf"\g<1>{url}\g<2>", text)
+    # dateModified: the last commit to the page's source, next to the
+    # datePublished the layout prints, so freshness is machine-readable.
+    text = re.sub(r'("datePublished": "[^"]*")', rf'\1,\n            "dateModified": "{source_date(page)}"', text, count=1)
     page.write_text(text, encoding="utf-8")
     return url
 
@@ -54,6 +66,40 @@ def fix_page(page: Path) -> str | None:
 def title_of(page: Path) -> str:
     m = re.search(r"<title>(.*?)</title>", page.read_text(encoding="utf-8"), flags=re.DOTALL)
     return m.group(1).strip() if m else page.parent.name
+
+
+def check_sri() -> list[str]:
+    """Each local <script>/<link> with integrity= must match its file."""
+    import base64
+    import hashlib
+    bad = []
+    tag = re.compile(r'<(?:script|link)\b[^>]*\bintegrity="([^"]+)"[^>]*>')
+    for page in sorted(OUT.rglob("*.html")):
+        for m in tag.finditer(page.read_text(encoding="utf-8")):
+            ref = re.search(r'\b(?:src|href)="(/[^"]+)"', m.group(0))
+            if not ref:
+                continue
+            algo, _, want = m.group(1).partition("-")
+            asset = OUT / ref.group(1).lstrip("/")
+            got = base64.b64encode(hashlib.new(algo, asset.read_bytes()).digest()).decode() if asset.is_file() else "missing"
+            if got != want:
+                bad.append(f"{page.relative_to(OUT)}: {ref.group(1)} ({got if got == 'missing' else 'hash differs'})")
+    return bad
+
+
+def check_fragments() -> list[str]:
+    """Every link to /page/#id on this site must land on an existing id."""
+    ids = {}
+    for page in OUT.rglob("index.html"):
+        url = "/" + str(page.parent.relative_to(OUT)).replace(".", "") + "/"
+        ids[url.replace("//", "/")] = set(re.findall(r'\bid="([^"]+)"', page.read_text(encoding="utf-8")))
+    bad = []
+    for page in sorted(OUT.rglob("*.html")):
+        for path, frag in re.findall(r'href="(/[^"#?]*)#([^"]+)"', page.read_text(encoding="utf-8")):
+            target = path if path.endswith("/") else path + "/"
+            if frag not in ids.get(target, set()):
+                bad.append(f"{page.relative_to(OUT)}: {path}#{frag}")
+    return sorted(set(bad))
 
 
 def main() -> None:
@@ -83,8 +129,22 @@ def main() -> None:
         f"# {CONFIG['site_name']}\n\n> {CONFIG['site_description']}\n\n## Pages\n\n{pages}", encoding="utf-8"
     )
     print(f"post-build: {len(entries)} pages in sitemap.xml, dated {date}")
+    frags = check_fragments()
+    if frags:
+        print("broken #fragment links:\n  " + "\n  ".join(frags), file=sys.stderr)
+        sys.exit(1)
+    sri = check_sri()
+    if sri:
+        print("SRI check failed:\n  " + "\n  ".join(sri), file=sys.stderr)
+        sys.exit(1)
     report = json.loads((OUT / "quality-gate-report.json").read_text(encoding="utf-8"))
-    issues = [f"{name}: {issue}" for name, p in report["pillars"].items() for issue in p["issues"]]
+    # ssg 0.0.69's in-pipeline SRI pillar flags pages whose integrity
+    # attribute is correct (it reads some pages before their final hash is
+    # written). check_sri() above verifies every hash against the final
+    # files, and `ssg audit`'s csp_sri gate does too, so that pillar is
+    # not used here.
+    issues = [f"{name}: {issue}" for name, p in report["pillars"].items()
+              if not name.startswith("4. SRI") for issue in p["issues"]]
     if issues:
         print("quality gate failed:\n  " + "\n  ".join(issues), file=sys.stderr)
         sys.exit(1)

@@ -1,33 +1,44 @@
 ---
 name: "Corral"
-short_name: "corrallib"
-title: "About Sebastien Rousseau & Corral"
-description: "Background and credentials of Sebastien Rousseau, creator of Corral and financial infrastructure architect."
-keywords: "Sebastien Rousseau, Corral creator, open source architect"
+short_name: "Corral"
+title: "About Corral and its author, Sebastien Rousseau | Corral"
+description: "Who builds Corral, why corralctl exists, and the facts about the project: its licence, language, releases and where its source and security policy live."
+keywords: "corral author, sebastien rousseau, corralctl project, corralctl licence"
 author: "Sebastien Rousseau"
-date: "2026-09-01"
-language: "en-GB"
+date: "2026-10-25"
+news_publication_date: "2026-10-25"
 layout: "page"
-permalink: "https://corrallib.com/about/index.html"
-logo: "/logo.svg"
-banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
-banner_alt: "Corral — High-Performance Repository & Workspace Engine"
+language: "en-GB"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "About"
+headline: "About Corral"
+lead: "Corral is an open-source project by Sebastien Rousseau, built to keep a large set of repositories in order on one machine."
 ---
+## Who builds Corral?
 
-# About Sebastien Rousseau
+[Sebastien Rousseau](https://sebastienrousseau.com/) is a payments leader with
+19 years in banking, based in London, who builds open-source software for
+ISO 20022 payments, post-quantum cryptography and applied AI for finance.
+corralctl is the tool he uses to keep his own workspace of repositories, across
+several forges, cloned, current and searchable. He is on
+[GitHub](https://github.com/sebastienrousseau) as sebastienrousseau.
 
-<div class="author-pedigree-strip my-4">
-<div class="author-avatar-wrap">
-<img src="https://cloudcdn.pro/stocks/images/sebastien-rousseau-20260617-5th-commercialising-quantum-1-320.webp" alt="Sebastien Rousseau" class="author-avatar" width="96" height="96" />
-</div>
-<div class="author-bio-content">
-<h2 class="author-name mb-1">Sebastien Rousseau</h2>
-<div class="author-role">Principal Systems Architect · 19 Years in Production Infrastructure</div>
-<p class="author-text">Sebastien Rousseau has spent nearly two decades architecting, building, and securing high-volume transaction processing systems, institutional payment rails, and cryptographic protocols across global financial centres.</p>
-</div>
-</div>
+## Project facts
 
-## Background & Pedigree
+| | |
+| :--- | :--- |
+| **Binary** | `corralctl` |
+| **Language** | Go, with no C dependencies |
+| **Licence** | GNU General Public License v3.0 |
+| **First commit** | March 2026 |
+| **Latest release** | [GitHub releases](https://github.com/sebastienrousseau/corralctl/releases/latest) |
+| **Source** | [github.com/sebastienrousseau/corralctl](https://github.com/sebastienrousseau/corralctl) |
+| **Manual** | [doc.corrallib.com](https://doc.corrallib.com/) |
+| **Security policy** | [SECURITY.md](https://github.com/sebastienrousseau/corralctl/security/policy) |
+| **Independent checks** | OpenSSF Best Practices passing, Scorecard 8.3 (25 October 2026); see [security](/security/#who-else-has-checked-it) |
 
-- **19 Years in Production Systems:** Deep experience across corporate and investment banking (CIB), payment rails, and developer productivity tooling.
-- **Author of Open-Source Tools:** Creator of Corral, KyberLib (FIPS 203 ML-KEM), Bank Statement Parser, and hsh with over 45.7M+ total downloads across crates.io.
+The project is pre-1.0 and follows semantic versioning. It treats a change to
+what corralctl does to a workspace as breaking even when no flag changes: a
+new default layout, a different exit code, or a refusal that becomes
+permissive.

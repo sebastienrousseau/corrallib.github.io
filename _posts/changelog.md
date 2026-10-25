@@ -1,26 +1,40 @@
 ---
 name: "Corral"
-short_name: "corrallib"
-title: "Changelog & Version History"
-description: "Release notes and changelog for Corral starting at v0.0.1."
-keywords: "corral changelog, version history"
+short_name: "Corral"
+title: "Changelog: recent corralctl releases | Corral"
+description: "What changed in the latest corralctl releases, with links to the full changelog and the signed release artefacts."
+keywords: "corralctl changelog, corralctl releases, corralctl version history"
 author: "Sebastien Rousseau"
-date: "2026-09-01"
-language: "en-GB"
+date: "2026-10-25"
+news_publication_date: "2026-10-25"
 layout: "page"
-permalink: "https://corrallib.com/changelog/index.html"
-logo: "/logo.svg"
-banner: "https://cloudcdn.pro/stocks/images/quantum-computer-room-1200.webp"
-banner_alt: "Corral — High-Performance Repository & Workspace Engine"
+language: "en-GB"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "Changelog"
+headline: "corralctl releases up to 25 October 2026"
+lead: "The four newest releases on 25 October 2026. Newer ones, and the full history of every change, are in CHANGELOG.md and on the releases page."
 ---
+## 0.0.52, 13 October 2026
 
-# Changelog
+- `corralctl doctor --exclude` skips large, vendored or unmanaged trees by
+  name, relative path or glob.
+- `corralctl doctor --timeout` sets a per-repository deadline (30 seconds by
+  default), so one slow repository cannot stall a workspace audit.
 
-All notable changes to **Corral** are documented in this file following Semantic Versioning.
+## 0.0.51, 12 October 2026
 
-## [0.0.1] - 2026-09-01
-### Added
-- Initial release of Corral documentation portal.
-- Rust Static Site Generator (SSG) native compilation pipeline.
-- Concurrency benchmarks and architecture documentation.
-- WCAG 2.2 Level AAA compliant design system.
+Dependency and toolchain maintenance.
+
+## 0.0.50, 11 October 2026
+
+Documentation and operational manual completeness.
+
+## 0.0.49, 11 October 2026
+
+A concurrency race in the test suites fixed.
+
+## Full history
+
+- [CHANGELOG.md](https://github.com/sebastienrousseau/corralctl/blob/main/CHANGELOG.md)
+- [Signed releases on GitHub](https://github.com/sebastienrousseau/corralctl/releases)

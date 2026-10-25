@@ -1,171 +1,268 @@
-<!DOCTYPE html>
-<html lang="en-GB" data-theme-mode="system">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>{{title}} | Corral</title>
-  
-  <meta name="author" content="Sebastien Rousseau">
-  <meta name="description" content="{{description}}">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://formspree.io; img-src 'self' data: https: https://cloudcdn.pro; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self'; form-action 'self' https://formspree.io;" />
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Corral">
-  <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="{{title}} | Corral">
-  <meta property="og:description" content="{{description}}">
-  <meta property="og:image" content="{{banner}}">
-  <meta property="og:url" content="https://corrallib.com/">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{title}} | Corral">
-  <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image" content="{{banner}}">
-
-  <link rel="alternate" href="https://corrallib.com/" hreflang="en" />
-  <link rel="canonical" href="https://corrallib.com/" />
-  <link rel="icon" type="image/svg+xml" href="{{logo}}" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-  <link rel="stylesheet" href="/styles.css">
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://corrallib.com/#software",
-      "name": "Corral",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Linux, macOS, Windows",
-      "license": "https://opensource.org/licenses/Apache-2.0",
-      "author": {
-        "@type": "Person",
-        "name": "Sebastien Rousseau",
-        "url": "https://sebastienrousseau.com"
-      },
-      "url": "https://corrallib.com/",
-      "logo": "/logo.svg",
-      "description": "High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution."
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://corrallib.com/#website",
-      "url": "https://corrallib.com/",
-      "name": "Corral",
-      "publisher": {
-        "@type": "Person",
-        "name": "Sebastien Rousseau",
-        "url": "https://sebastienrousseau.com"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://corrallib.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://corrallib.com/#webpage",
-      "url": "https://corrallib.com/",
-      "name": "Corral | High-Performance Repository & Workspace Engine",
-      "description": "High-performance repository cloning and workspace organization engine categorizing multi-ecosystem codebases into structured collections with parallel async execution.",
-      "isPartOf": {
-        "@id": "https://corrallib.com/#website"
-      }
-    }
-  ]
-}
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <nav class="navbar" aria-label="Main Navigation">
-    <div class="navbar-container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/" aria-label="Corral Homepage">
-          <img src="/logo.svg" alt="Corral Logo" width="32" height="32" class="d-inline-block" />
-          <span class="navbar-brand-text">Corral</span>
-        </a>
-
-        <!-- Mobile actions -->
-        <div class="navbar-actions d-flex d-lg-none">
-          <button type="button" class="btn search-trigger" id="searchTriggerMobile" aria-label="Search">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </button>
-
-          <div class="theme-switcher" role="radiogroup" aria-label="Theme mode">
-            <button type="button" class="theme-btn" data-theme-mode="light" aria-label="Light mode">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            </button>
-            <button type="button" class="theme-btn" data-theme-mode="dark" aria-label="Dark mode">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <button type="button" class="theme-btn active" data-theme-mode="system" aria-label="System mode">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            </button>
-          </div>
-
-          <button type="button" class="navbar-toggle" id="navbarToggle" aria-expanded="false" aria-controls="navbarMenu" aria-label="Toggle navigation menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          </button>
+{{#extends "base"}}
+{{#block "main"}}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+      <h1 id="hero-heading">{{headline}}</h1>
+      <p class="lead hero-lead">{{lead}}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+        <a class="btn btn-hero-secondary" href="{{site_path}}features/">See what it does</a>
+      </div>
+    </div>
+    <!--
+      Three cards, each a real behaviour of corralctl described in its README.
+      Decorative, so hidden from assistive technology: the same facts are in
+      the page text below.
+    -->
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-glow"></div>
+      <div class="mock mock-treasury">
+        <div class="mock-row">
+          <span class="mock-chip"></span>
+          <svg class="mock-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+        </div>
+        <p class="mock-label">Symbol lookup across 187 clones</p>
+        <strong class="mock-amount">1.3 s</strong>
+        <div class="mock-row">
+          <span class="mock-mono">corral_find_symbol</span>
+          <span class="mock-pill">was 6.9 s</span>
         </div>
       </div>
-
-      <div class="navbar-menu" id="navbarMenu"><ul class="nav-list"><li class="nav-item"><a class="nav-link" href="/getting-started/index.html">Getting Started</a></li><li class="nav-item"><a class="nav-link" href="/features/index.html">Features</a></li><li class="nav-item"><a class="nav-link" href="/documentation/index.html">Documentation</a></li><li class="nav-item"><a class="nav-link" href="/examples/index.html">Examples</a></li><li class="nav-item"><a class="nav-link" href="/benchmarks/index.html">Benchmarks</a></li><li class="nav-item"><a class="nav-link" href="/architecture/index.html">Architecture</a></li><li class="nav-item"><a class="nav-link" href="/security/index.html">Security</a></li><li class="nav-item"><a class="nav-link" href="/faqs/index.html">FAQ</a></li><li class="nav-item nav-item-cta"><a class="btn btn-dark ms-lg-2" href="/getting-started/index.html">Install CLI</a></li></ul></div>
-
-      <!-- Desktop actions -->
-      <div class="navbar-actions d-none d-lg-flex">
-        <button type="button" class="btn search-trigger" id="searchTrigger" aria-label="Search">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span>Search</span>
-          <kbd class="search-kbd">⌘K</kbd>
-        </button>
-
-        <div class="theme-switcher" role="radiogroup" aria-label="Theme mode">
-          <button type="button" class="theme-btn" data-theme-mode="light" aria-label="Light mode">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </button>
-          <button type="button" class="theme-btn" data-theme-mode="dark" aria-label="Dark mode">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          </button>
-          <button type="button" class="theme-btn active" data-theme-mode="system" aria-label="System mode">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          </button>
+      <div class="mock mock-growth">
+        <p class="mock-label mock-label-clay">Smart sync</p>
+        <strong class="mock-amount">Pull skipped <span class="mock-pill">pushed_at unchanged</span></strong>
+        <svg class="mock-chart" viewBox="0 0 300 95" preserveAspectRatio="none">
+          <path d="M0 70 L 60 70 L 60 40 L 140 40 L 140 70 L 220 70 L 220 25 L 300 25" fill="none" stroke="#2d6a4f" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="mock mock-phone">
+        <span class="mock-notch"></span>
+        <div class="mock-notice">
+          <p class="mock-notice-title">Prune refused</p>
+          <strong class="mock-notice-amount">Unpushed commits</strong>
+          <p class="mock-notice-meta">Public/Go/corral kept on disk</p>
         </div>
       </div>
     </div>
-  </nav>
-
-  <main id="main" class="content-wrapper" aria-label="Main content">
-    {{content}}
-  </main>
-
-  <div class="text-center py-4">
-    <a href="#main" class="btn btn-outline-dark" aria-label="Back to the top">Back to the top ↑</a>
   </div>
+  <div class="hero-slope" aria-hidden="true"></div>
+</section>
 
-  <footer><div class="container-xxl"><div class="row g-4"><div class="col-lg-3 col-md-6"><h2 class="h5 fw-bold mb-3">Documentation & API</h2><ul class="list-unstyled d-flex flex-column gap-2"><li><a href="/getting-started/index.html">Getting Started</a></li><li><a href="/features/index.html">Features & Capabilities</a></li><li><a href="/documentation/index.html">CLI Command Reference</a></li><li><a href="/examples/index.html">Workspace Examples</a></li><li><a href="/api/index.html">Rust Crate Reference</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="h5 fw-bold mb-3">Architecture & Speed</h2><ul class="list-unstyled d-flex flex-column gap-2"><li><a href="/benchmarks/index.html">Performance Benchmarks</a></li><li><a href="/architecture/index.html">Async Worker Pool</a></li><li><a href="/security/index.html">Security & Zero Telemetry</a></li><li><a href="/contact/index.html">Enterprise Support</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="h5 fw-bold mb-3">Open Source & Author</h2><ul class="list-unstyled d-flex flex-column gap-2"><li><a href="/about/index.html">About Sebastien Rousseau</a></li><li><a href="/changelog/index.html">Release Changelog</a></li><li><a href="/contributing/index.html">Contributing Guide</a></li><li><a href="/faqs/index.html">Questions & Answers</a></li><li><a href="/made-with-ssg/index.html">Made with SSG</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="h5 fw-bold mb-3">Legal & Feeds</h2><ul class="list-unstyled d-flex flex-column gap-2"><li><a href="/accessibility/index.html">Accessibility (WCAG AAA)</a></li><li><a href="/terms/index.html">Terms of Use</a></li><li><a href="/privacy/index.html">Privacy Policy</a></li><li><a href="/rss.xml">RSS Feed</a></li><li><a href="/atom.xml">Atom Feed</a></li><li><a href="/feed.json">JSON Feed</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div></div><div class="text-center pt-4 mt-4 border-top text-muted small">© 2026 <a href="https://sebastienrousseau.com/" rel="author">Sebastien Rousseau</a>. Corral. High-performance workspace organization engine. All releases Sigstore-signed.</div></div></footer>
+<section class="section section-partners" aria-labelledby="forges-heading">
+  <div class="container">
+    <h2 class="section-label" id="forges-heading">Clones from six forges</h2>
+    <ul class="partners">
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 3v18" /></svg><span>GitHub</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /></svg><span>GitLab</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><line x1="3" y1="9" x2="21" y2="9" /></svg><span>Gitea</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg><span>Forgejo</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg><span>Codeberg</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg><span>Bitbucket</span></li>
+    </ul>
+  </div>
+</section>
 
-  <div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
-    <div class="search-backdrop"></div>
-    <div class="search-dialog">
-      <div class="search-header">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="search" id="searchInput" class="search-input" placeholder="Search commands, examples, architecture..." aria-label="Search query" autocomplete="off">
-        <button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button>
-      </div>
-      <div id="searchResults" class="search-results" role="listbox">
-        <div class="search-empty">Type to search...</div>
-      </div>
+<section class="section" id="features" aria-labelledby="features-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2 id="features-heading">One binary for every repository on your machine</h2>
+      <p class="lead">Each card opens its section on the features page.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="icon-badge badge-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" /></svg></span>
+        <h3>Organised layout</h3>
+        <p>Clones land in Public/, Private/ and Forks/, then by language, so the same repository is always at the same path. On macOS each folder also gets Finder tags.</p>
+        <a class="card-link" href="{{site_path}}features/#organised-layout">How the layout works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-green" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" /></svg></span>
+        <h3>Smart syncing</h3>
+        <p>A sidecar file records each clone's last known push. When the forge reports nothing new, corralctl skips the git pull entirely.</p>
+        <a class="card-link" href="{{site_path}}features/#smart-syncing">How smart syncing works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-clay" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" /></svg></span>
+        <h3>Exec mode</h3>
+        <p>Run one shell command across every clone at once, narrowed by language or visibility: git status, a test run, an audit.</p>
+        <a class="card-link" href="{{site_path}}features/#exec-mode">How exec works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" /></svg></span>
+        <h3>Mirror to other forges</h3>
+        <p>corralctl sync pushes the organised tree out to GitLab, Gitea, Forgejo, Codeberg, Bitbucket or GitHub, and never force-pushes a branch.</p>
+        <a class="card-link" href="{{site_path}}features/#mirror-to-other-forges">How mirroring works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-burgundy" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /><line x1="9" y1="1" x2="9" y2="4" /><line x1="15" y1="1" x2="15" y2="4" /><line x1="9" y1="20" x2="9" y2="23" /><line x1="15" y1="20" x2="15" y2="23" /></svg></span>
+        <h3>MCP server</h3>
+        <p>Serves your local clones to AI coding agents. Read-only by default: no network calls, and the GitHub API is never contacted.</p>
+        <a class="card-link" href="{{site_path}}mcp-server/">How the MCP server works</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-navy" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></span>
+        <h3>Cross-repository symbol lookup</h3>
+        <p>Find where a function or type is declared, and where text is written, across every clone on the machine rather than the one an editor has open.</p>
+        <a class="card-link" href="{{site_path}}features/#cross-repository-symbol-lookup">How symbol lookup works</a>
+      </article>
     </div>
   </div>
+</section>
 
-  <script src="/main.js" defer></script>
-</body>
-</html>
+<section class="section section-soft" id="use-cases" aria-labelledby="use-cases-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">Who it is for</p>
+      <h2 id="use-cases-heading">Four ways people use corralctl</h2>
+      <p class="lead">The same commands, for four different jobs.</p>
+    </div>
+    <div class="grid grid-2">
+      <article class="card">
+        <p class="tag tag-blue">Developers</p>
+        <h3>You own hundreds of repositories</h3>
+        <p>One command clones what is missing, pulls what is stale and leaves the rest alone, then puts every clone where you would look for it.</p>
+        <a class="card-link" href="{{site_path}}use-cases/#many-repositories">Read the use case</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-burgundy">AI agents</p>
+        <h3>Your coding agent needs the whole workspace</h3>
+        <p>The MCP server tells an agent which repository holds a symbol before it opens a file, and refuses to delete anything holding unpublished work.</p>
+        <a class="card-link" href="{{site_path}}use-cases/#ai-coding-agents">Read the use case</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-clay">Forges</p>
+        <h3>You are moving between forges</h3>
+        <p>Clone from one host and mirror to the others, keeping each repository's visibility, with a dry run before anything is pushed.</p>
+        <a class="card-link" href="{{site_path}}use-cases/#moving-between-forges">Read the use case</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-green">Automation</p>
+        <h3>Your sync runs while you sleep</h3>
+        <p>Every git call runs without prompts, so a cron job or systemd timer fails cleanly instead of hanging, and a non-zero exit tells you why.</p>
+        <a class="card-link" href="{{site_path}}use-cases/#unattended-syncs">Read the use case</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="developers" aria-labelledby="dev-heading">
+  <div class="container dev-grid">
+    <div class="dev-copy stack">
+      <p class="eyebrow eyebrow-clay">Install</p>
+      <h2 id="dev-heading">From install to an organised workspace in two commands</h2>
+      <p class="lead dev-lead">corralctl is a single static Go binary. Install it with mise, Homebrew, the AUR, Nix or the Go toolchain, sign in to GitHub, and point it at an owner.</p>
+      <ul class="pills" aria-label="Ways to install">
+        <li class="pill">mise</li>
+        <li class="pill">Homebrew</li>
+        <li class="pill">AUR</li>
+        <li class="pill">Nix</li>
+        <li class="pill">go install</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-hero-primary" href="{{site_path}}getting-started/">Read the getting started guide</a>
+      </div>
+    </div>
+
+    <figure class="code-window">
+      <figcaption class="code-titlebar">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-filename">Terminal</span>
+      </figcaption>
+      <pre class="code-body"><code><span class="syn-comment"># Install (macOS or Linux)</span>
+<span class="syn-function">mise</span> use -g github:sebastienrousseau/corralctl
+
+<span class="syn-comment"># Sign in once, or set GITHUB_TOKEN</span>
+<span class="syn-function">gh</span> auth login
+
+<span class="syn-comment"># Clone and organise every repository you own</span>
+<span class="syn-function">corralctl</span> clone <span class="syn-string">my-username</span>
+
+<span class="syn-comment"># Preview the next run without touching disk</span>
+<span class="syn-function">corralctl</span> plan <span class="syn-string">my-username</span></code></pre>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="trust" aria-labelledby="trust-heading">
+  <div class="container">
+    <div class="card governance-card">
+      <div class="stack">
+        <div class="eyebrow eyebrow-green">Security</div>
+        <h2 id="trust-heading">Built to refuse before it deletes</h2>
+        <p class="lead">corralctl runs with your own credentials on your own machine, so its security model is about limiting the blast radius of a mistake.</p>
+        <p>Prune and the MCP delete tool decline any clone holding uncommitted, unpushed, stashed, submodule or gitignored work. Tokens never reach a command line or .git/config, and every release is signed and reproducible.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="{{site_path}}security/">Read the security model</a>
+        </div>
+      </div>
+      <dl class="metrics">
+        <div class="metric">
+          <dt>Release signing</dt>
+          <dd>Keyless cosign</dd>
+        </div>
+        <div class="metric">
+          <dt>Build provenance</dt>
+          <dd>SLSA</dd>
+        </div>
+        <div class="metric">
+          <dt>Software bill of materials</dt>
+          <dd>CycloneDX</dd>
+        </div>
+        <div class="metric">
+          <dt>MCP server default</dt>
+          <dd>Read-only</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="scale" aria-labelledby="scale-heading">
+  <div class="container stack">
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">In numbers</p>
+      <h2 id="scale-heading">What one binary covers</h2>
+      <p class="lead mx-auto">Counted from the corralctl README; the timing is its measured cross-repository lookup on a real 187-repository workspace.</p>
+    </div>
+    <dl class="grid grid-4 stats">
+      <div class="stat">
+        <dt>Forges it clones from</dt>
+        <dd>6</dd>
+      </div>
+      <div class="stat">
+        <dt>MCP tools, 9 read-only</dt>
+        <dd>13</dd>
+      </div>
+      <div class="stat">
+        <dt>Languages in the symbol index</dt>
+        <dd>5</dd>
+      </div>
+      <div class="stat">
+        <dt>Symbol lookup, 187 clones</dt>
+        <dd>1.3 s</dd>
+      </div>
+    </dl>
+    <ul class="stream" aria-label="MCP clients named in the README">
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Claude Code</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Cursor</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Cline</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Codex CLI</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Aider</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>Any MCP client</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container stack">
+    <div class="prose">{{!content}}</div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+      <a class="btn btn-secondary" href="https://github.com/sebastienrousseau/corralctl">Source on GitHub</a>
+    </div>
+  </div>
+</section>
+{{/block}}
