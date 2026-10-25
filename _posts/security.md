@@ -55,6 +55,17 @@ Yes, at the boundaries that parse input or resolve paths: layout evaluation,
 language normalisation, remote-URL parsing and the sandbox check. The fuzz
 targets run on every push. corralctl is not enrolled in OSS-Fuzz.
 
+## Who else has checked it?
+
+These results come from the services themselves, read on 25 October 2026:
+
+| Check | Result |
+| :--- | :--- |
+| [OpenSSF Best Practices](https://www.bestpractices.dev/projects/13455) | Passing badge |
+| [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/corralctl) | 8.3 out of 10 |
+| [Official MCP Registry](https://registry.modelcontextprotocol.io/) | Listed as `io.github.sebastienrousseau/corral` |
+| [Glama MCP directory](https://glama.ai/mcp/servers/sebastienrousseau/corralctl) | Listed |
+
 ## How do I report a vulnerability?
 
 Privately, never in a public issue: follow

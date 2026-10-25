@@ -12,8 +12,8 @@ language: "en-GB"
 schema: "page"
 changefreq: "monthly"
 eyebrow: "Changelog"
-headline: "Recent corralctl releases"
-lead: "The newest releases at the time this page was written. The full history, with every change, is in CHANGELOG.md."
+headline: "corralctl releases up to 25 October 2026"
+lead: "The four newest releases on 25 October 2026. Newer ones, and the full history of every change, are in CHANGELOG.md and on the releases page."
 ---
 ## 0.0.52, 13 October 2026
 

@@ -38,6 +38,15 @@ def last_commit_date() -> str:
     return out.stdout.strip() or "1970-01-01"
 
 
+def source_date(page: Path) -> str:
+    """Last commit date of the Markdown file a built page comes from."""
+    rel = page.parent.relative_to(OUT)
+    src = Path(CONFIG["content_dir"]) / (f"{rel}.md" if str(rel) != "." else "index.md")
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(src)],
+                         capture_output=True, text=True, check=False)
+    return out.stdout.strip() or last_commit_date()
+
+
 def fix_page(page: Path) -> str | None:
     text = page.read_text(encoding="utf-8")
     for dev in ("http://127.0.0.1:8000", "http://localhost:8000"):
@@ -47,6 +56,9 @@ def fix_page(page: Path) -> str | None:
     if url:
         text = re.sub(r'(<meta property="og:url" content=")[^"]*(")', rf"\g<1>{url}\g<2>", text)
         text = re.sub(r'(<link rel="alternate" href=")[^"]*(" hreflang=)', rf"\g<1>{url}\g<2>", text)
+    # dateModified: the last commit to the page's source, next to the
+    # datePublished the layout prints, so freshness is machine-readable.
+    text = re.sub(r'("datePublished": "[^"]*")', rf'\1,\n            "dateModified": "{source_date(page)}"', text, count=1)
     page.write_text(text, encoding="utf-8")
     return url
 

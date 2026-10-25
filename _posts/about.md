@@ -36,6 +36,7 @@ several forges, cloned, current and searchable. He is on
 | **Source** | [github.com/sebastienrousseau/corralctl](https://github.com/sebastienrousseau/corralctl) |
 | **Manual** | [doc.corrallib.com](https://doc.corrallib.com/) |
 | **Security policy** | [SECURITY.md](https://github.com/sebastienrousseau/corralctl/security/policy) |
+| **Independent checks** | OpenSSF Best Practices passing, Scorecard 8.3 (25 October 2026); see [security](/security/#who-else-has-checked-it) |
 
 The project is pre-1.0 and follows semantic versioning. It treats a change to
 what corralctl does to a workspace as breaking even when no flag changes: a
