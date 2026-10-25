@@ -9,10 +9,12 @@ help:
 	@echo "make screenshot - render static/images/screenshot.png from the build"
 	@echo "make clean  - remove build output"
 
-# ssg's own quality gate runs inside post-build.py; `ssg audit` then checks
+# contrast.py gates the colour tokens (WCAG AAA text, 3:1 UI); ssg's own
+# quality gate runs inside post-build.py; `ssg audit` then checks
 # the final files (WCAG, JSON-LD, CSP/SRI, links, metadata, feeds...).
 build:
 	rm -rf docs
+	python3 scripts/contrast.py
 	ssg build -f ssg.toml -q
 	python3 scripts/anchor_headings.py docs
 	python3 scripts/post-build.py

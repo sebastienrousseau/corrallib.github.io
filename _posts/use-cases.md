@@ -58,3 +58,5 @@ any repository failed, which is what a scheduler needs to alert on.
 - **For code intelligence.** It finds declarations, not references or types.
 - **On Windows without WSL.** Binaries are published, but Finder tags do
   nothing there and it is less tested than on macOS and Linux.
+
+The [comparison page](/compare/) shows which tool fits each of these jobs.
