@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://corrallib.com/architecture/index.html/sitemap.xml
