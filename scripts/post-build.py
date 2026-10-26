@@ -7,9 +7,9 @@
 - Replaces the dev-server origin ssg leaves in some links with base_url.
 - Writes one sitemap.xml for the whole site, dated by the last commit,
   so a rebuild of the same commit produces the same file.
-- Writes CNAME and llms.txt, and copies robots.txt, .well-known/ and
-  static/ (site files such as a logo) into the output.
-- Fails the build if ssg's own 10-pillar quality gate reported issues.
+- Writes CNAME and llms.txt, and copies robots.txt, .well-known/,
+  static/ (site files such as a logo) and 404.html into the output.
+- Fails the build unless ssg's own 10-pillar quality gate passed 10/10.
 """
 
 from __future__ import annotations
@@ -122,6 +122,10 @@ def main() -> None:
     shutil.copytree(".well-known", OUT / ".well-known", dirs_exist_ok=True)
     if Path("static").is_dir():
         shutil.copytree("static", OUT, dirs_exist_ok=True)
+    # GitHub Pages serves /404.html for a missing page; every link in it
+    # is root-relative, so a copy of the built 404 page works there.
+    if (OUT / "404" / "index.html").is_file():
+        shutil.copy2(OUT / "404" / "index.html", OUT / "404.html")
     domain = BASE.split("://", 1)[1]
     (OUT / "CNAME").write_text(domain + "\n", encoding="utf-8")
     pages = "".join(f"- [{t}]({u})\n" for u, t in entries)
@@ -138,14 +142,11 @@ def main() -> None:
         print("SRI check failed:\n  " + "\n  ".join(sri), file=sys.stderr)
         sys.exit(1)
     report = json.loads((OUT / "quality-gate-report.json").read_text(encoding="utf-8"))
-    # ssg 0.0.69's in-pipeline SRI pillar flags pages whose integrity
-    # attribute is correct (it reads some pages before their final hash is
-    # written). check_sri() above verifies every hash against the final
-    # files, and `ssg audit`'s csp_sri gate does too, so that pillar is
-    # not used here.
-    issues = [f"{name}: {issue}" for name, p in report["pillars"].items()
-              if not name.startswith("4. SRI") for issue in p["issues"]]
-    if issues:
+    # Every pillar must pass. ssg 0.0.69's SRI pillar misreads an
+    # apostrophe in an HTML comment in <head> as an opening quote, so
+    # base.html keeps its head comments free of them.
+    issues = [f"{name}: {issue}" for name, p in report["pillars"].items() for issue in p["issues"]]
+    if issues or report["passed_pillars"] != report["total_pillars"]:
         print("quality gate failed:\n  " + "\n  ".join(issues), file=sys.stderr)
         sys.exit(1)
     print(f"quality gate: {report['passed_pillars']}/{report['total_pillars']} pillars, 0 issues")
