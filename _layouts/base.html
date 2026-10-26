@@ -107,9 +107,11 @@
       }
     </script>
 
-    <!-- Skeletonic Stylus core, loaded before the theme's own
-         stylesheet so its @layer skeletonic.* blocks are declared
-         first and the theme wins every overlap. -->
+    <!-- Skeletonic Stylus core, loaded before the theme stylesheet
+         so its @layer skeletonic.* blocks are declared first and the
+         theme wins every overlap. No apostrophes in head comments:
+         the ssg 0.0.69 quality gate reads one as an opening quote and
+         then pairs the wrong integrity value with theme-init.js. -->
     <link rel="stylesheet" href="{{site_path}}skeletonic.min.css" />
     <link rel="stylesheet" href="{{site_path}}styles.css" />
     <script src="{{site_path}}theme-init.js"></script>
