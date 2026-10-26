@@ -18,6 +18,7 @@ build:
 	ssg build -f ssg.toml -q
 	python3 scripts/anchor_headings.py docs
 	python3 scripts/post-build.py
+	python3 scripts/og_images.py
 	ssg audit -o docs -f ssg.toml --skip-network
 
 serve: build
