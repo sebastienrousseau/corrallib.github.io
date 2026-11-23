@@ -68,7 +68,7 @@ git clone https://github.com/sebastienrousseau/corrallib.github.io.git
 cd corrallib.github.io
 ```
 
-Install `ssg` 0.0.69 or newer from its
+Install `ssg` 0.0.76 or newer from its
 [releases](https://github.com/sebastienrousseau/static-site-generator/releases)
 or with `cargo install ssg`.
 
@@ -76,7 +76,7 @@ or with `cargo install ssg`.
 
 ## Requirements
 
-- **ssg** 0.0.69 or newer on `PATH` (CI pins the 0.0.69 release by SHA-256).
+- **ssg** 0.0.76 or newer on `PATH` (CI pins the 0.0.76 release by SHA-256).
 - **Python** 3.11 or newer, for the post-build scripts.
 - **Chrome or Chromium**, for the per-page social images in `make build`
   and for `make screenshot`. Set `CHROME` to choose the binary.
