@@ -5,6 +5,13 @@ based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The site
 ships in lockstep with corralctl; iterations before 0.0.55 were never
 tagged and are recorded in pull requests #1 to #5.
 
+## [0.0.56]
+
+### Changed
+
+- `VERSION` moves to 0.0.56, in lockstep with corralctl 0.0.56. Nothing
+  else on the site changed in this iteration.
+
 ## [0.0.55]
 
 ### Changed
